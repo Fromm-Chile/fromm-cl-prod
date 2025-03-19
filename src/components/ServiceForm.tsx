@@ -148,7 +148,7 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
               <div className="flex items-center justify-start gap-4 mb-2">
                 <img src="/icons/instantmessage.svg" height={30} width={30} />
                 <a
-                  href="https://api.whatsapp.com/send?phone=56939522069"
+                  href="https://api.whatsapp.com/send?phone=56932590343"
                   target="_blank"
                   rel="noreferrer"
                 >
