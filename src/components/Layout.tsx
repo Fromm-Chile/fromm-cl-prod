@@ -26,7 +26,7 @@ const footerNavData: FooterNavDataType[] = [
       { id: 2, name: "Airpads", link: "/productos" },
       { id: 3, name: "Herramientas de Apoyo", link: "/productos" },
       { id: 4, name: "Máquinas Envolvedoras", link: "/productos" },
-      { id: 5, name: "Máquinas y Heramientas", link: "/productos" },
+      { id: 5, name: "Máquinas y Herramientas", link: "/productos" },
       { id: 6, name: "Sistemas de Embalaje", link: "/productos" },
       { id: 7, name: "Zunchos", link: "/productos" },
     ],
