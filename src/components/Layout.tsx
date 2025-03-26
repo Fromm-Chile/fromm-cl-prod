@@ -103,7 +103,7 @@ export const Layout = () => {
               Teléfono: +56 2 2571 1100
             </p>
           </div>
-          <ul className="lg:hidden self-start ml-8 mb-8 text-red font-medium">
+          <ul className="lg:hidden self-start ml-8 mb-2 text-red font-medium">
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/soluciones">
                 <p>Soluciones</p>
@@ -129,6 +129,22 @@ export const Layout = () => {
               </Link>
             </li>
           </ul>
+          <div className="lg:hidden flex items-center justify-start gap-4 mt-2 mb-5 ml-8">
+            <a
+              href="https://www.instagram.com/frommchile?igsh=ZjcwYjFpZ2E5MWE0"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/icons/Navbar/instagram.svg" width={30} height={30} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/fromm-chile-s-a/posts/?feedView=all&viewAsMember=true"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="/icons/Navbar/linkedin.svg" width={30} height={30} />
+            </a>
+          </div>
           <div className="hidden lg:block self-start ml-8 mb-6 relative">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {footerNavData.map((section) => (
@@ -151,14 +167,38 @@ export const Layout = () => {
                 </div>
               ))}
             </div>
-            {/* <div className="flex items-center justify-start gap-8 mt-8 absolute bottom-16 right-20">
-              <a href="">
-                <img src="/icons/Navbar/instagram.svg" width={40} height={40} />
-              </a>
-              <a href="">
-                <img src="/icons/Navbar/linkedin.svg" width={40} height={40} />
-              </a>
-            </div> */}
+            <div className="flex items-center flex-col justify-start gap-1 mt-8 absolute bottom-0 right-10">
+              <div className="flex items-center gap-4 border hover:border-2 transition-hover duration-150 border-red rounded-full p-2 w-[170px]">
+                <a
+                  href="https://www.instagram.com/frommchile?igsh=ZjcwYjFpZ2E5MWE0"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3"
+                >
+                  <img
+                    src="/icons/Navbar/instagram.svg"
+                    width={40}
+                    height={40}
+                  />
+                  <p>Instagram</p>
+                </a>
+              </div>
+              <div className="flex items-center gap-4 border hover:border-2 transition-hover duration-150 border-red rounded-full p-2 pl-5 w-[170px]">
+                <a
+                  href="https://www.linkedin.com/company/fromm-chile-s-a/posts/?feedView=all&viewAsMember=true"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3"
+                >
+                  <img
+                    src="/icons/Navbar/linkedin.svg"
+                    width={40}
+                    height={40}
+                  />
+                  <p>LinkedIn</p>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">
