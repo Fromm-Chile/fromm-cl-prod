@@ -129,7 +129,7 @@ export const Layout = () => {
               </Link>
             </li>
           </ul>
-          <div className="hidden lg:block self-start ml-8 mb-6">
+          <div className="hidden lg:block self-start ml-8 mb-6 relative">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {footerNavData.map((section) => (
                 <div key={section.id} className="text-textGray w-[200px]">
@@ -151,6 +151,14 @@ export const Layout = () => {
                 </div>
               ))}
             </div>
+            {/* <div className="flex items-center justify-start gap-8 mt-8 absolute bottom-16 right-20">
+              <a href="">
+                <img src="/icons/Navbar/instagram.svg" width={40} height={40} />
+              </a>
+              <a href="">
+                <img src="/icons/Navbar/linkedin.svg" width={40} height={40} />
+              </a>
+            </div> */}
           </div>
         </div>
         <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">

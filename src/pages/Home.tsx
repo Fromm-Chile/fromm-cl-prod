@@ -25,8 +25,8 @@ export const Home = () => {
             loop
             muted
           ></video>
-          <div className="absolute z-50 bg-[#E52D38] mix-blend-multiply h-10 w-full bottom-0 lg:bottom-[-1rem] lg:w-[40%] lg:h-[300px] lg:left-16"></div>
-          <div className="hidden lg:block absolute z-50 h-10 w-full bottom-0 lg:w-[40%] lg:h-[300px] lg:left-16">
+          {/* <div className="absolute z-50 bg-[#E52D38] mix-blend-multiply h-10 w-full bottom-0 lg:bottom-[-1rem] lg:w-[40%] lg:h-[300px] lg:left-16"></div> */}
+          {/* <div className="hidden lg:block absolute z-50 h-10 w-full bottom-0 lg:w-[40%] lg:h-[300px] lg:left-16">
             <div className="flex flex-col items-center justify-start mt-14 h-full">
               <h2 className="text-white font-bold lg:text-[20px] xl:text-[26px]">
                 FROMM CHILE
@@ -90,7 +90,7 @@ export const Home = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="bg-red text-white flex flex-col items-start p-8 lg:hidden">
