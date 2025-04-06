@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 type ButtonProps = PropsWithChildren<{
   link: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   className?: string;
   whiteButton?: boolean;
 }>;

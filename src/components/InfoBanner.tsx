@@ -10,6 +10,7 @@ type InfoBannerProps = {
   video?: boolean;
   sinBoton?: boolean;
   category: string;
+  onClick?: () => void;
 };
 
 export const InfoBanner = ({
@@ -22,6 +23,7 @@ export const InfoBanner = ({
   video,
   sinBoton,
   category,
+  onClick,
 }: InfoBannerProps) => {
   return (
     <div>
@@ -51,7 +53,7 @@ export const InfoBanner = ({
           </p>
           <p className="child font-extralight md:text-lg">{desc}</p>
           {sinBoton ? null : (
-            <Button link={link} whiteButton>
+            <Button link={link} whiteButton onClick={onClick}>
               {buttonTitle}
             </Button>
           )}

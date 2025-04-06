@@ -76,7 +76,7 @@ export const CustomSelect = () => {
           {selectData.map((data) => (
             <Link to={data.link} key={data.id}>
               <li
-                className="p-3 hover:bg-gray-200 cursor-pointer ml-5"
+                className="p-3 hover:bg-gray-200 cursor-pointer pl-8"
                 onClick={() => handleOptionClick(data.value)}
               >
                 {data.value}

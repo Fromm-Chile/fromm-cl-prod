@@ -45,6 +45,8 @@ export const Cotizacion = () => {
   const { removeProduct, updateProduct, reset } = useProductStore();
 
   const onSubmit = async (data: FormData) => {
+    // console.log(data);
+    // return;
     if (products.length === 0) {
       setError("Debes incluir al menos 1 producto en la cotización!");
       return;

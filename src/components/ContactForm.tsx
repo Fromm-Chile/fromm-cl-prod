@@ -27,7 +27,7 @@ const schema = yup.object().shape({
   name: yup.string().required("Nombre es requerido"),
   email: yup.string().email().required("Correo es requerido"),
   phone: yup.string(),
-  company: yup.string(),
+  company: yup.string().required("El nombre de la empresa es requerido"),
   message: yup.string().required("Mensaje es requerido"),
 });
 
@@ -101,7 +101,7 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
               <InputController
                 control={control}
                 name="company"
-                placeholder="Empresa"
+                placeholder="Empresa*"
               />
               <TextareaController
                 control={control}

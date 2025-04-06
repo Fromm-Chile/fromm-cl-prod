@@ -25,12 +25,14 @@ import { Agricola } from "./pages/Mercados/Agricola";
 import { Siderurgica } from "./pages/Mercados/Siderurgica";
 import { Cotizacion } from "./pages/Cotizacion";
 import { Confirmacion } from "./pages/Confirmacion";
+import ScrollToAnchor from "./hooks/useScrollToAnchor";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <>
+        <ScrollToAnchor />
         <ScrollToTop />
         <Layout />
       </>

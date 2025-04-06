@@ -16,7 +16,7 @@ export const ServicioTecnico = () => {
         alt="servicio-tecnico"
         category="CONTACTO"
         desc="Nuestro equipo de técnicos especializados en maquinaria de embalaje, le brindará el soporte necesario para mantener su equipo en óptimas condiciones de funcionamiento."
-        link="/contacto"
+        link="/servicio-tecnico#service-form"
         buttonTitle="Contáctanos"
       />
       <section className="px-10 md:max-w-[875px] md:m-auto mt-20 md:mb-10 md:mt-20">
@@ -61,10 +61,12 @@ export const ServicioTecnico = () => {
           </p>
         </div>
       </section>
-      <ServiceForm
-        titulo="SOLICITUD DE SERVICIO TÉCNICO"
-        descripcion="Si desea realizar mantención preventiva, correctiva o adquirir algún repuesto para sus equipos, no dude en contactase con nuestro servicio."
-      />
+      <div id="service-form" className="mt-[-35px]">
+        <ServiceForm
+          titulo="SOLICITUD DE SERVICIO TÉCNICO"
+          descripcion="Si desea realizar mantención preventiva, correctiva o adquirir algún repuesto para sus equipos, no dude en contactase con nuestro servicio."
+        />
+      </div>
     </>
   );
 };
