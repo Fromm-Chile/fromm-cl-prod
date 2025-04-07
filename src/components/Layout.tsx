@@ -83,7 +83,12 @@ export const Layout = () => {
       </div>
       <Navbar />
       <Outlet />
-      <footer className="bg-primaryGray h-auto flex flex-col items-center pt-16 pb-9 md:px-32 w-full">
+      <footer className="bg-primaryGray h-auto flex flex-col items-center pt-16 pb-9 md:px-32 w-full relative">
+        <img
+          src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/sgs.png"
+          alt="sgs-certifiacion"
+          className="rounded-lg lg:w-[120px] lg:h-[120px] w-[90px] h-[90px] lg:rounded-xl border border-gray-300 absolute lg:top-[18px] lg:right-[335px] bottom-[213px] right-[30px]"
+        />
         <Link className="mb-14" to="/">
           <img
             className="max-w-[310px]"
@@ -201,7 +206,7 @@ export const Layout = () => {
             </div>
           </div>
         </div>
-        <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center lg:mb-0">
+        <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center w-[90%] lg:mb-0">
           <p className="text-textGray font-light mt-4">
             © 2025 Fromm Chile. Todos los derechos reservados.
           </p>

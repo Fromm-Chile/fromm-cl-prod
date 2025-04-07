@@ -156,6 +156,11 @@ export const Home = () => {
               <p className="text-2xl font-extralight text-textGray text-left">
                 TRANSFORMAMOS EL EMBAJALE EN UNA EXPERIENCIA
               </p>
+              <img
+                src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/sgs.png"
+                alt="sgs-certifiacion"
+                className="rounded-lg mt-8 mb-4 lg:mb-0 lg:w-[230px] lg:h-[230px] w-[180px] h-[180px] lg:rounded-xl m-auto border border-gray-300"
+              />
             </div>
             <div className="flex flex-col gap-8 justify-center items-center lg:flex-col-reverse lg:w-[50%]">
               <img
