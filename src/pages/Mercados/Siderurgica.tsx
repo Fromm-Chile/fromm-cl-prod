@@ -104,6 +104,96 @@ export const Siderurgica = () => {
               <p>Seguridad y ergonomía de los empleados;</p>
             </li>
           </ul>
+          <h3 className="text-textGray font-semibold text-2xl text-left">
+            ¿Dónde se usan nuestros zunchos en la industria de metales?
+          </h3>
+          <ul className="flex flex-col gap-5 my-5">
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>Flejado de bobinas de acero y aluminio:</strong>{" "}
+                Mantiene unidas las bobinas de metal sin deformaciones ni
+                desplazamientos.
+              </p>
+            </li>
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>
+                  Aseguramiento de perfiles metálicos, tubos, alambron de acero:
+                </strong>{" "}
+                Evita movimientos en paquetes de barras, vigas, tubos,
+                alambrones de acero y otros elementos estructurales.
+              </p>
+            </li>
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>Paletización de chapas y láminas metálicas:</strong>{" "}
+                Protege los productos en acero inoxidable, galvanizado o
+                aluminio para su distribución segura.
+              </p>
+            </li>
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>Agrupación de piezas fundidas y maquinadas:</strong>{" "}
+                Facilita la manipulación de componentes pesados en la
+                fabricación industrial.
+              </p>
+            </li>
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>Sujeción de chatarra y residuos metálicos:</strong>{" "}
+                Optimiza el manejo de material reciclable en plantas de
+                recuperación.
+              </p>
+            </li>
+          </ul>
+          <h3 className="text-textGray font-semibold text-2xl text-left">
+            Ventajas de los zunchos FROMM para la industria de metales
+          </h3>
+          <ul className="flex flex-col gap-5 my-5">
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>Alta resistencia y sujeción firme:</strong> El zuncho de
+                acero es ideal para cargas extremadamente pesadas.
+              </p>
+            </li>
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>Alternativa sin corrosión:</strong> El zuncho es una
+                excelente opción para metales sensibles a la oxidación.
+              </p>
+            </li>
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>Mayor seguridad en el transporte:</strong> Reduce el
+                riesgo de accidentes por cargas sueltas o desestabilizadas.
+              </p>
+            </li>
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>
+                  Compatibilidad con enzunchadoras automáticas y manuales:
+                </strong>{" "}
+                Adaptado a procesos industriales de gran escala.
+              </p>
+            </li>
+            <li className="flex gap-2 items-start">
+              <img src="/icons/checkList.svg" />
+              <p>
+                <strong>Aseguramiento de bobinas de papel y cartón:</strong>{" "}
+                Imprescindible en la industria del Packaging para el correcto
+                manejo y distribución de materias primas.
+              </p>
+            </li>
+          </ul>
           <p className="text-justify">
             Nos aseguramos de que pueda lograr el resultado deseado con menos
             material de embalaje. Al hacerlo, innovamos todos los aspectos del
@@ -120,8 +210,8 @@ export const Siderurgica = () => {
         </div>
       </section>
       <ContactForm
-        titulo="¿Necesitas más información sobre nuestras soluciones de embalaje para la industria metalúrgica?"
-        descripcion="Envianos un mensaje y nos pondremos en contacto contigo a la brevedad."
+        titulo="Refuerza la seguridad en la manipulación de metales con los zunchos FROMM."
+        descripcion="¡Cotiza con nosotros la mejor opción para tu industria!"
       />
     </>
   );

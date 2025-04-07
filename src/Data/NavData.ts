@@ -68,6 +68,36 @@ export const navbarData: NavbarDataType[] = [
         link: "/siderurgica",
         name: "SIDERÚRGICA",
       },
+      {
+        id: 5,
+        link: "/construccion",
+        name: "CONSTRUCCIÓN",
+      },
+      {
+        id: 6,
+        link: "/ceramica",
+        name: "CERAMICA",
+      },
+      {
+        id: 7,
+        link: "/envases",
+        name: "ENVASES",
+      },
+      {
+        id: 8,
+        link: "/fibras-textiles",
+        name: "FIBRAS Y TEXTILES",
+      },
+      {
+        id: 9,
+        link: "/papel",
+        name: "PAPEL",
+      },
+      {
+        id: 10,
+        link: "/vidrio",
+        name: "VIDRIO",
+      },
     ],
   },
   {

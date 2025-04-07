@@ -26,6 +26,12 @@ import { Siderurgica } from "./pages/Mercados/Siderurgica";
 import { Cotizacion } from "./pages/Cotizacion";
 import { Confirmacion } from "./pages/Confirmacion";
 import ScrollToAnchor from "./hooks/useScrollToAnchor";
+import { Construccion } from "./pages/Mercados/Construccion";
+import { Ceramica } from "./pages/Mercados/Ceramica";
+import { Envases } from "./pages/Mercados/Envases";
+import { FibrasTextiles } from "./pages/Mercados/FibrasTextiles";
+import { Papel } from "./pages/Mercados/Papel";
+import { Vidrio } from "./pages/Mercados/Vidrio";
 
 export const router = createBrowserRouter([
   {
@@ -55,6 +61,12 @@ export const router = createBrowserRouter([
       { path: "/forestal", element: <Forestal /> },
       { path: "/siderurgica", element: <Siderurgica /> },
       { path: "/agricola", element: <Agricola /> },
+      { path: "/construccion", element: <Construccion /> },
+      { path: "/ceramica", element: <Ceramica /> },
+      { path: "/envases", element: <Envases /> },
+      { path: "/fibras-textiles", element: <FibrasTextiles /> },
+      { path: "/papel", element: <Papel /> },
+      { path: "/vidrio", element: <Vidrio /> },
       { path: "/nosotros", element: <AboutUs /> },
       { path: "/politica-calidad", element: <PoliticaCalidad /> },
       { path: "/codigo-etica", element: <CodigoEtica /> },
