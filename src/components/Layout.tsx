@@ -87,7 +87,7 @@ export const Layout = () => {
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/sgs.png"
           alt="sgs-certifiacion"
-          className="rounded-lg lg:w-[120px] lg:h-[120px] w-[90px] h-[90px] lg:rounded-xl border border-gray-300 absolute lg:top-[18px] lg:right-[335px] bottom-[213px] right-[30px]"
+          className="rounded-lg lg:w-[220px] lg:h-[140px] w-[180px] h-[110px] lg:rounded-xl absolute lg:top-[18px] lg:right-[285px] bottom-[213px] right-[30px]"
         />
         <Link className="mb-14" to="/">
           <img
