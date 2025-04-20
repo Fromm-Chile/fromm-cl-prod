@@ -104,16 +104,19 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
                 control={control}
                 name="equipment"
                 placeholder="Tipo de Máquina*"
+                error={errors.equipment?.message}
               />
               <InputController
                 control={control}
                 name="company"
                 placeholder="Empresa*"
+                error={errors.company?.message}
               />
               <TextareaController
                 control={control}
                 name="message"
                 placeholder="Mensaje*"
+                error={errors.message?.message}
               />
               <div className="flex justify-center">
                 <Button

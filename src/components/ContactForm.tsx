@@ -102,11 +102,13 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
                 control={control}
                 name="company"
                 placeholder="Empresa*"
+                error={errors.company?.message}
               />
               <TextareaController
                 control={control}
                 name="message"
                 placeholder="Mensaje*"
+                error={errors.message?.message}
               />
               <div className="flex justify-center">
                 <Button
