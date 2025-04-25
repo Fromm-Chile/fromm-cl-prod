@@ -14,7 +14,7 @@ export const Home = () => {
       <section>
         <div className="relative">
           <img
-            src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/homeFoto.jpeg"
+            src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
             alt="home-picture"
             className="w-full h-[450px] object-cover lg:hidden"
           />
