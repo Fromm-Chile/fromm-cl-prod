@@ -2,6 +2,31 @@ import { Link } from "react-router-dom";
 import { Button } from "../components/commons/Button";
 import { HomeCard } from "../components/HomeCard";
 import { CustomSelect } from "../components/commons/CustomSelect";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/swiper-bundle.css";
+
+const swiperData: { id: number; image: string; link: string }[] = [
+  {
+    id: 1,
+    image:
+      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/PM%20207%20ROJO.jpg",
+    link: "/productos/enzunchadora-mesa-pm207?producto=17",
+  },
+  {
+    id: 2,
+    image:
+      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fr300%20negro.jpg",
+    link: "/productos/envolvedora-automatica-fr300?producto=78",
+  },
+  {
+    id: 3,
+    image:
+      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/SISTEMAS%20GRIS%20MEDIO.jpg",
+    link: "/productos?categoryId=23",
+  },
+];
 
 export const Home = () => {
   return (
@@ -18,79 +43,33 @@ export const Home = () => {
             alt="home-picture"
             className="w-full h-[450px] object-cover lg:hidden"
           />
-          <video
+          {/* <video
             src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fromm-chile.mp4"
             className="hidden lg:block w-full h-[450px] object-cover -z-10"
             autoPlay
             loop
             muted
-          ></video>
-          {/* <div className="absolute z-50 bg-[#E52D38] mix-blend-multiply h-10 w-full bottom-0 lg:bottom-[-1rem] lg:w-[40%] lg:h-[300px] lg:left-16"></div> */}
-          {/* <div className="hidden lg:block absolute z-50 h-10 w-full bottom-0 lg:w-[40%] lg:h-[300px] lg:left-16">
-            <div className="flex flex-col items-center justify-start mt-14 h-full">
-              <h2 className="text-white font-bold lg:text-[20px] xl:text-[26px]">
-                FROMM CHILE
-              </h2>
-              <p className="text-white font-extralight lg:text-[20px] xl:text-[26px]">
-                EMBALAJE CON INNOVACIÓN Y PRECISIÓN
-              </p>
-            </div>
-            <ul className="flex gap-4 absolute bottom-4 left-0 p-8 text-white">
-              <li className="group">
-                <Link
-                  className="flex items-center gap-2"
-                  to="/zunchos-herramientas"
-                >
+          ></video> */}
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={0}
+            slidesPerView={1}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            scrollbar={{ draggable: true }}
+            speed={500}
+          >
+            {swiperData.map((item) => (
+              <SwiperSlide key={item.id}>
+                <Link to={item.link}>
                   <img
-                    className="transition-transform duration-300 group-hover:-translate-x-2"
-                    src="/icons/chevronRight.svg"
+                    src={item.image}
+                    alt="home-picture"
+                    className="w-full h-[620px] object-fit lg:block hidden"
                   />
-                  <div>
-                    <h3 className="font-medium text-white text-xs">
-                      SOLUCIONES
-                    </h3>
-                    <p className="text-white font-bold text-sm xl:text-base">
-                      ZUNCHOS
-                    </p>
-                  </div>
                 </Link>
-              </li>
-              <li className="group">
-                <Link className="flex items-center gap-2" to="/airpads">
-                  <img
-                    className="transition-transform duration-300 group-hover:-translate-x-2"
-                    src="/icons/chevronRight.svg"
-                  />
-
-                  <div>
-                    <h3 className="font-medium text-white text-xs">
-                      SOLUCIONES
-                    </h3>
-                    <p className="text-white font-bold xl:text-base">AIRPADS</p>
-                  </div>
-                </Link>
-              </li>
-              <li className="group">
-                <Link
-                  className="flex items-center gap-2"
-                  to="/servicio-tecnico"
-                >
-                  <img
-                    className="transition-transform duration-300 group-hover:-translate-x-2"
-                    src="/icons/chevronRight.svg"
-                  />
-                  <div>
-                    <h3 className="font-medium text-white text-xs">
-                      SOLUCIONES
-                    </h3>
-                    <p className="text-white font-bold text-sm xl:text-base">
-                      SERVICIO TECNICO
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-          </div> */}
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         <div className="bg-red text-white flex flex-col items-start p-8 lg:hidden">
@@ -146,7 +125,7 @@ export const Home = () => {
         </div>
       </section>
       <main>
-        <section className="relative">
+        <section className="relative mt-24">
           <div className="bg-primaryGray px-8 pt-[100px] lg:pt-24 w-full lg:mt-0 pb-20 lg:flex xl:gap-16">
             <div className="md:w-[45%]">
               <p className="font-extralight text-xl text-red tracking-widest">
