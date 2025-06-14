@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+## Technologies Used
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **React**: For building the user interface.
+- **TypeScript**: For type-safe JavaScript development.
+- **Vite**: As the build tool and development server.
+- **Tailwind CSS**: For utility-first CSS styling.
+- **ESLint & Prettier**: For code linting and formatting.
 
-Currently, two official plugins are available:
+## How to Run the Project Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Follow these steps to get the project running on your computer:
 
-## Expanding the ESLint configuration
+1. **Clone the Repository**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   Open your terminal and run:
+   ```sh
+   git clone https://github.com/your-username/fromm-cl-prod.git
+   cd fromm-cl-prod
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. **Install Dependencies**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   Make sure you have [Node.js](https://nodejs.org/) installed (recommended version 16 or higher). Then run:
+   ```sh
+   npm install
+   ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. **Set Up Environment Variables**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   The project uses a `.env` file for environment variables. You can find a sample or the actual `.env` file in the root directory. The main variable used is:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```
+   VITE_API_URL=your_api_url_here
+   ```
+
+   - Replace `your_api_url_here` with the actual API endpoint you want to use.
+   - If the `.env` file does not exist, create it in the root folder and add the variable above.
+
+4. **Start the Development Server**
+
+   Run:
+   ```sh
+   npm run dev
+   ```
+
+   This will start the app at [http://localhost:5173](http://localhost:5173) (or another port if 5173 is busy).
+
+## Environmental Variables
+
+- **VITE_API_URL**: The base URL for your backend API.  
+  Example:
+  ```
+  VITE_API_URL=https://api.example.com
+  ```
+
+  This variable is accessed in the code via `import.meta.env.VITE_API_URL` (see [src/assets/variables.ts](src/assets/variables.ts)).
+
+---
+
+Now anyone can clone, set up, and run the project easily!
