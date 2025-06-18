@@ -64,6 +64,7 @@ export const Home = () => {
         return [];
       }
     },
+    staleTime: 5 * 60 * 1000,
   });
 
   console.log(swiperData);
