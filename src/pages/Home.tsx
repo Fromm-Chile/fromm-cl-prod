@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../components/commons/Button";
 import { HomeCard } from "../components/HomeCard";
 import { CustomSelect } from "../components/commons/CustomSelect";
@@ -6,31 +6,71 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 import "swiper/swiper-bundle.css";
+import { useQuery } from "@tanstack/react-query";
+import axios, { AxiosError } from "axios";
+import { apiUrl } from "../assets/variables";
+import { Loader } from "../components/Loader";
 
-const swiperData: { id: number; image: string; link: string }[] = [
-  {
-    id: 1,
-    image:
-      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/PM%20207%20ROJO.jpg",
-    link: "/productos/enzunchadora-mesa-pm207?producto=17",
-  },
-  {
-    id: 2,
-    image:
-      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fr300%20negro.jpg",
-    link: "/productos/envolvedora-automatica-fr300?producto=78",
-  },
-  {
-    id: 3,
-    image:
-      "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/SISTEMAS%20GRIS%20MEDIO.jpg",
-    link: "/productos?categoryId=23",
-  },
-];
+// const swiperData: { id: number; image: string; link: string }[] = [
+//   {
+//     id: 1,
+//     image:
+//       "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/PM%20207%20ROJO.jpg",
+//     link: "/productos/enzunchadora-mesa-pm207?producto=17",
+//   },
+//   {
+//     id: 2,
+//     image:
+//       "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fr300%20negro.jpg",
+//     link: "/productos/envolvedora-automatica-fr300?producto=78",
+//   },
+//   {
+//     id: 3,
+//     image:
+//       "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/SISTEMAS%20GRIS%20MEDIO.jpg",
+//     link: "/productos?categoryId=23",
+//   },
+// ];
+
+export type Banner = {
+  id: string;
+  name: string;
+  url: string;
+  order: number;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
+};
 
 export const Home = () => {
+  const navigate = useNavigate();
+
+  const { data: swiperData = [], isLoading } = useQuery({
+    queryKey: ["bannerSwiper"],
+    queryFn: async (): Promise<Banner[]> => {
+      try {
+        const { data } = await axios.get(`${apiUrl}/banners/active`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        });
+        return data;
+      } catch (error) {
+        if (error instanceof AxiosError && error.status === 401) {
+          navigate("/login");
+        } else {
+          console.error("Unexpected error:", error);
+        }
+        return [];
+      }
+    },
+  });
+
+  console.log(swiperData);
+
   return (
     <>
+      {isLoading && <Loader />}
       <title>Fromm Chile</title>
       <meta
         name="description"
@@ -60,10 +100,10 @@ export const Home = () => {
           >
             {swiperData.map((item) => (
               <SwiperSlide key={item.id}>
-                <Link to={item.link}>
+                <Link to={item.url}>
                   <img
-                    src={item.image}
-                    alt="home-picture"
+                    src={item.url}
+                    alt={item.name}
                     className="w-full h-[620px] object-fit lg:block hidden"
                   />
                 </Link>
