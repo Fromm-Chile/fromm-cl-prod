@@ -105,7 +105,7 @@ export const Home = () => {
                   <img
                     src={item.url}
                     alt={item.name}
-                    className="w-full h-[620px] object-fit lg:block hidden"
+                    className="w-full h-[650px] object-fit lg:block hidden"
                   />
                 </Link>
               </SwiperSlide>
