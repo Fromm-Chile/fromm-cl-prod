@@ -166,8 +166,8 @@ export const Home = () => {
         </div>
       </section>
       <main>
-        <section className="relative mt-24">
-          <div className="bg-primaryGray px-8 pt-[100px] lg:pt-24 w-full lg:mt-0 pb-20 lg:flex xl:gap-16">
+        <section className="relative mt-5">
+          <div className="bg-primaryGray px-8 pt-[100px] lg:pt-10 w-full lg:mt-0 pb-20 lg:flex xl:gap-16">
             <div className="md:w-[45%]">
               <p className="font-extralight text-xl text-red tracking-widest">
                 BIENVENIDO!
