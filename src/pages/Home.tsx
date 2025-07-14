@@ -78,7 +78,7 @@ export const Home = () => {
         content="información de la empresa y productos"
       />
       <section>
-        <div className="relative bg-black/90">
+        <div className="relative">
           <img
             src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
             alt="home-picture"
@@ -105,7 +105,7 @@ export const Home = () => {
                   <img
                     src={item.url}
                     alt={item.name}
-                    className="w-[80%] m-auto h-[350px] object-fit lg:block hidden"
+                    className="w-[100%] m-auto h-[350px] object-fit lg:block hidden"
                   />
                 </Link>
               </SwiperSlide>
