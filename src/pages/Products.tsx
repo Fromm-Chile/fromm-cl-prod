@@ -34,7 +34,7 @@ export type ProductType = {
 };
 
 export const Products = () => {
-  const [search, setSearch] = useState<string>("");
+  const [search, setSearch] = useState("");
 
   const debouncedSearch = useDebounce(search, 800);
 

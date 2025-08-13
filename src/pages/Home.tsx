@@ -4,33 +4,11 @@ import { HomeCard } from "../components/HomeCard";
 import { CustomSelect } from "../components/commons/CustomSelect";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
 import "swiper/swiper-bundle.css";
 import { useQuery } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
 import { apiUrl } from "../assets/variables";
 import { Loader } from "../components/Loader";
-
-// const swiperData: { id: number; image: string; link: string }[] = [
-//   {
-//     id: 1,
-//     image:
-//       "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/PM%20207%20ROJO.jpg",
-//     link: "/productos/enzunchadora-mesa-pm207?producto=17",
-//   },
-//   {
-//     id: 2,
-//     image:
-//       "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fr300%20negro.jpg",
-//     link: "/productos/envolvedora-automatica-fr300?producto=78",
-//   },
-//   {
-//     id: 3,
-//     image:
-//       "https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/SISTEMAS%20GRIS%20MEDIO.jpg",
-//     link: "/productos?categoryId=23",
-//   },
-// ];
 
 export type Banner = {
   id: string;
@@ -82,15 +60,8 @@ export const Home = () => {
           <img
             src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
             alt="home-picture"
-            className="w-full h-[450px] object-cover lg:hidden"
+            className="h-[450px] object-cover lg:hidden"
           />
-          {/* <video
-            src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fromm-chile.mp4"
-            className="hidden lg:block w-full h-[450px] object-cover -z-10"
-            autoPlay
-            loop
-            muted
-          ></video> */}
           <Swiper
             modules={[Autoplay]}
             spaceBetween={0}
@@ -105,7 +76,7 @@ export const Home = () => {
                   <img
                     src={item.url}
                     alt={item.name}
-                    className="w-[100%] m-auto h-[350px] object-fit lg:block hidden"
+                    className="w-full h-[350px] object-fit lg:block hidden"
                   />
                 </Link>
               </SwiperSlide>

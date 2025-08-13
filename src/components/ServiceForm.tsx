@@ -34,7 +34,7 @@ const schema = yup.object().shape({
 });
 
 export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
 
