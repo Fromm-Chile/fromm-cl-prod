@@ -1,37 +1,35 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Layout } from "./components/Layout";
-import { ServicioTecnico } from "./pages/ServicioTecnico";
-import { Zunchos } from "./pages/Zunchos";
-import { Recursos } from "./pages/Recursos";
-import Airpads from "./pages/Airpads";
-import { Contacto } from "./pages/Contacto";
-import ScrollToTop from "./components/ScrollToTop";
-import { MaquinasEnvolvedoras } from "./pages/MaquinasEnvolvedoras";
-import { Products } from "./pages/Products";
-import { ProductDetails } from "./pages/ProductDetails";
-import { FilmEmbalaje } from "./pages/FilmEmbalaje";
-import { AboutUs } from "./pages/AboutUs";
-// import { EmbalajeEco } from "./pages/EmbalajeEco";
-// import { OrganizacionServicios } from "./pages/OrganizacionServicios";
-import { Markets } from "./pages/Markets";
-import { Solutions } from "./pages/Solutions";
-import { News } from "./pages/News";
-import { PoliticaCalidad } from "./pages/PoliticaCalidad";
-import { CodigoEtica } from "./pages/CodigoEtica";
-import { Mineria } from "./pages/Mercados/Mineria";
-import { Forestal } from "./pages/Mercados/Forestal";
-import { Agricola } from "./pages/Mercados/Agricola";
-import { Siderurgica } from "./pages/Mercados/Siderurgica";
-import { Cotizacion } from "./pages/Cotizacion";
-import { Confirmacion } from "./pages/Confirmacion";
 import ScrollToAnchor from "./hooks/useScrollToAnchor";
-import { Construccion } from "./pages/Mercados/Construccion";
-import { Ceramica } from "./pages/Mercados/Ceramica";
-import { Envases } from "./pages/Mercados/Envases";
-import { FibrasTextiles } from "./pages/Mercados/FibrasTextiles";
-import { Papel } from "./pages/Mercados/Papel";
-import { Vidrio } from "./pages/Mercados/Vidrio";
+import { Layout } from "./components/Layout/Layout";
+import {
+  AboutUs,
+  Agricola,
+  Airpads,
+  Ceramica,
+  CodigoEtica,
+  Confirmacion,
+  Construccion,
+  Contacto,
+  Cotizacion,
+  Envases,
+  FibrasTextiles,
+  FilmEmbalaje,
+  Forestal,
+  Home,
+  MaquinasEnvolvedoras,
+  Markets,
+  Mineria,
+  Papel,
+  PoliticaCalidad,
+  ProductDetails,
+  Products,
+  ServicioTecnico,
+  Siderurgica,
+  Solutions,
+  Vidrio,
+  Zunchos,
+} from "./pages";
+import ScrollToTop from "./components/ui/ScrollToTop";
 
 export const router = createBrowserRouter([
   {
@@ -54,7 +52,6 @@ export const router = createBrowserRouter([
       { path: "/confirmacion", element: <Confirmacion /> },
       { path: "/servicio-tecnico", element: <ServicioTecnico /> },
       { path: "/zunchos-herramientas", element: <Zunchos /> },
-      { path: "/recursos", element: <Recursos /> },
       { path: "/Airpads", element: <Airpads /> },
       { path: "/mercados", element: <Markets /> },
       { path: "/mineria", element: <Mineria /> },
@@ -70,10 +67,7 @@ export const router = createBrowserRouter([
       { path: "/nosotros", element: <AboutUs /> },
       { path: "/politica-calidad", element: <PoliticaCalidad /> },
       { path: "/codigo-etica", element: <CodigoEtica /> },
-      // {path: "/embalaje-ecofriendly", element: <EmbalajeEco />},
-      // {path: "/organizacion-servicios", element: <OrganizacionServicios/>},
       { path: "/Contacto", element: <Contacto /> },
-      { path: "/noticias", element: <News /> },
       { path: "*", element: <Navigate to="/" /> },
     ],
   },
