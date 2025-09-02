@@ -56,34 +56,50 @@ export const Home = () => {
         content="información de la empresa y productos"
       />
       <section>
-        <div className="relative">
-          <img
-            src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
-            alt="home-picture"
-            className="h-[450px] object-cover lg:hidden"
-          />
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={0}
-            slidesPerView={1}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            scrollbar={{ draggable: true }}
-            speed={500}
-          >
-            {swiperData.map((item) => (
-              <SwiperSlide key={item.id}>
-                <Link to={item.url}>
-                  <img
-                    src={item.url}
-                    alt={item.name}
-                    className="w-full h-[350px] object-fit lg:block hidden"
-                  />
-                </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-
+        {swiperData.length > 0 ? (
+          <div className="relative">
+            <img
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
+              alt="home-picture"
+              className="h-[450px] object-cover lg:hidden"
+            />
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={0}
+              slidesPerView={1}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              scrollbar={{ draggable: true }}
+              speed={500}
+            >
+              {swiperData.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <Link to={item.url}>
+                    <img
+                      src={item.url}
+                      alt={item.name}
+                      className="w-full h-[350px] object-fit lg:block hidden"
+                    />
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        ) : (
+          <div className="relative">
+            <img
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
+              alt="home-picture"
+              className="w-full h-[450px] object-cover lg:hidden"
+            />
+            <video
+              src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fromm-chile.mp4"
+              className="hidden lg:block w-full h-[450px] object-cover -z-10"
+              autoPlay
+              loop
+              muted
+            ></video>
+          </div>
+        )}
         <div className="bg-red text-white flex flex-col items-start p-8 lg:hidden">
           <h1 className="text-[26px] font-bold">FROMM CHILE</h1>
           <h2 className="text-[26px] font-extralight mb-8">
