@@ -1,5 +1,5 @@
-import { ContactForm } from "../../components/ContactForm";
-import { InfoBanner } from "../../components/InfoBanner";
+import { ContactForm } from "../../components/form/ContactForm";
+import { InfoBanner } from "../../components/ui/InfoBanner";
 
 export const Agricola = () => {
   return (
