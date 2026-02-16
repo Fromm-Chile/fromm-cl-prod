@@ -78,6 +78,11 @@ export const Cotizacion = () => {
 
   return (
     <>
+      <title>Cotización de Productos | FROMM Chile</title>
+      <meta
+        name="description"
+        content="Solicita una cotización de productos de embalaje industrial FROMM Chile. Zunchos, envolvedoras, airpads y más. Respuesta rápida y personalizada."
+      />
       {isLoading ? (
         <Loader />
       ) : (

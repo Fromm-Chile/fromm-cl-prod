@@ -75,7 +75,7 @@ export const FloatingNav = () => {
                         {item.submenu.map((submenu) => (
                           <Link to={submenu.link} key={submenu.id}>
                             <li className="p-1 hover:font-extrabold cursor-pointer flex items-center transition-all duration-300 ease-in">
-                              <img src="/icons/chevronRightSmall.svg" />
+                              <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
                               {submenu.name}
                             </li>
                           </Link>

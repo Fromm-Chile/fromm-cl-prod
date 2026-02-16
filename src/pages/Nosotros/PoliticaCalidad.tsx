@@ -29,7 +29,7 @@ export const PoliticaCalidad = () => {
             </p>
             <ul className="flex flex-col gap-5 my-5">
               <li className="flex gap-2 items-center">
-                <img src="/icons/checkList.svg" />
+                <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
                 <p>
                   Planificar y realizar nuestro trabajo con el objetivo de
                   mantener la satisfacción de nuestras partes interesadas,
@@ -37,7 +37,7 @@ export const PoliticaCalidad = () => {
                 </p>
               </li>
               <li className="flex gap-2 items-center">
-                <img src="/icons/checkList.svg" />
+                <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
                 <p>
                   Mantener implementado el Sistema de Gestión de la Calidad,
                   como herramienta de apoyo para la Dirección Estratégica de la
@@ -45,13 +45,13 @@ export const PoliticaCalidad = () => {
                 </p>
               </li>
               <li className="flex gap-2 items-center">
-                <img src="/icons/checkList.svg" />
+                <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
                 <p>
                   Mejorar continuamente el Sistema de Gestión de la Calidad.
                 </p>
               </li>
               <li className="flex gap-2 items-center">
-                <img src="/icons/checkList.svg" />
+                <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
                 <p>
                   Potenciar a nuestros Colaboradores – el “Equipo Humano” que
                   conforma la organización – mediante el desarrollo de

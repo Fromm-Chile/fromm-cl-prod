@@ -18,7 +18,7 @@ export const InvoiceCard = ({
   return (
     <div className="border border-primaryGray p-5 md:py-5 md:px-0 rounded-lg text-textGray mb-3 md:flex md:justify-between md:items-center md:mx-10 relative">
       <div className="w-28 h-28 flex justify-center items-center mx-auto md:w-[20%] md:h-[20%]">
-        <img src={image} />
+        <img src={image} alt={name} loading="lazy" />
       </div>
       <div className="md:w-[70%] md:flex md:justify-between md:items-center">
         <div className="border-t md:border-none border-primaryGray pt-3 md:w-[60%] md:pt-0 md:text-xl text-textGray md:font-medium">
@@ -31,6 +31,7 @@ export const InvoiceCard = ({
           <div className="border-2 border-primaryGray rounded-xl p-1 flex justify-center items-center w-[30%]">
             <img
               src="/icons/InvoiceMinus.svg"
+              alt="Reducir cantidad"
               className="cursor-pointer hover:scale-125 trasition duration-300 ease-linear"
               onClick={handleSubtractQuantity}
             />
@@ -47,6 +48,7 @@ export const InvoiceCard = ({
             />
             <img
               src="/icons/InvoicePlus.svg"
+              alt="Aumentar cantidad"
               className="cursor-pointer hover:scale-125 trasition duration-300 ease-linear"
               onClick={handleAddQuantity}
             />
@@ -57,7 +59,7 @@ export const InvoiceCard = ({
         className="absolute top-3 right-4 cursor-pointer hover:scale-125 transition-hover duration-300 ease-linear"
         onClick={handleRemove}
       >
-        <img src="/icons/closeIcon.svg" height={30} width={30} />
+        <img src="/icons/closeIcon.svg" alt="Eliminar producto" height={30} width={30} />
       </div>
     </div>
   );

@@ -37,7 +37,8 @@ export const FibrasTextiles = () => {
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/textiles.jpg"
           className="h-[400px] w-[400px]"
-          alt="textiles"
+          alt="Zunchos para embalaje de fibras y textiles FROMM"
+          loading="lazy"
         />
       </section>
       <section className="mb-24 py-10">
@@ -47,7 +48,7 @@ export const FibrasTextiles = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Flejado de rollos de tela y textiles:</strong> Mantiene
                 los tejidos bien compactados durante el almacenamiento y
@@ -55,7 +56,7 @@ export const FibrasTextiles = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Agrupación de fardos de fibras naturales y sintéticas:
@@ -65,7 +66,7 @@ export const FibrasTextiles = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Sujeción de bobinas de hilo y cuerdas:</strong>{" "}
                 Garantiza la estabilidad de estos insumos en la cadena de
@@ -73,7 +74,7 @@ export const FibrasTextiles = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Flejado de empaques industriales de insumos textiles:
@@ -88,7 +89,7 @@ export const FibrasTextiles = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Alta resistencia sin dañar los productos:</strong> El
                 zuncho de PET es flexible y evita marcas o deformaciones en
@@ -96,7 +97,7 @@ export const FibrasTextiles = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Seguridad en el transporte:</strong> Minimiza
                 movimientos y desajustes que pueden afectar la calidad de los
@@ -104,14 +105,14 @@ export const FibrasTextiles = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Material reciclable y libre de corrosión:</strong> Ideal
                 para sectores que buscan soluciones sustentables.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Compatibilidad con sistemas de flejado automático y manual:

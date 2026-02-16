@@ -10,7 +10,7 @@ export const Loader = () => {
         </span>
       </div>
       <div className="absolute">
-        <img src="/img/Navbar/FrommLogo.webp" height={190} width={190} />
+        <img src="/img/Navbar/FrommLogo.webp" alt="FROMM Chile" height={190} width={190} />
       </div>
     </div>
   );

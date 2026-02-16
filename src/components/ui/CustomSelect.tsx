@@ -86,7 +86,7 @@ export const CustomSelect = () => {
       >
         <span>{selectedOption || "Tipo de Industria"}</span>
         <div className="h-8 w-8">
-          <img src="/icons/chevronDown.svg" />
+          <img src="/icons/chevronDown.svg" alt="" aria-hidden="true" />
         </div>
       </div>
       {isOpen && (

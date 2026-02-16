@@ -41,6 +41,7 @@ export const InfoBanner = ({
           <img
             src={srcImg}
             alt={alt}
+            loading="lazy"
             className="md:h-[520px] h-[200px] w-full md:w-full md:object-cover"
           />
         )}

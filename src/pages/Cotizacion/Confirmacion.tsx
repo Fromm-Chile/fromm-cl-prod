@@ -2,7 +2,13 @@ import { Button } from "../../components/ui/Button";
 
 export const Confirmacion = () => {
   return (
-    <div className="bg-primaryGray mb-20 pt-12 px-3 pb-5">
+    <>
+      <title>Solicitud Enviada | FROMM Chile</title>
+      <meta
+        name="description"
+        content="Tu solicitud de cotización ha sido enviada con éxito. El equipo de FROMM Chile te contactará a la brevedad."
+      />
+      <div className="bg-primaryGray mb-20 pt-12 px-3 pb-5">
       <h2 className="text-center mb-10 text-xl md:text-4xl font-medium">
         SOLICITUD ENVIADA
       </h2>
@@ -11,7 +17,7 @@ export const Confirmacion = () => {
           Tu solicitud ha sido enviada con éxito, te contactaremos a la
           brevedad.
         </p>
-        <img src="/icons/sent-mail.svg" className="w-[300px] h-[300px]" />
+        <img src="/icons/sent-mail.svg" className="w-[300px] h-[300px]" alt="Solicitud enviada exitosamente" />
       </div>
       <div className="flex justify-center">
         <Button
@@ -22,5 +28,6 @@ export const Confirmacion = () => {
         </Button>
       </div>
     </div>
+    </>
   );
 };

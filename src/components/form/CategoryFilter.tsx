@@ -95,7 +95,7 @@ export const CategoryFilter = ({
               >
                 <p className="text-left">{category.name}</p>
                 {category.other_Categories.length > 0 && (
-                  <img src="/icons/chevronDown.svg" className="h-8 w-8" />
+                  <img src="/icons/chevronDown.svg" className="h-8 w-8" alt="" aria-hidden="true" />
                 )}
               </div>
               {category.other_Categories.length > 0 ? (

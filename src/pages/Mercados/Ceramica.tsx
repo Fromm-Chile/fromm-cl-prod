@@ -38,12 +38,14 @@ export const Ceramica = () => {
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/ceramica1.jpg"
           className="h-[400px] w-[400px]"
-          alt="ceramica"
+          alt="Embalaje de productos cerámicos con zunchos FROMM"
+          loading="lazy"
         />
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/ceramica2.png"
           className="h-[400px] w-[400px]"
-          alt="ceramica"
+          alt="Solución de flejado para cerámica y porcelanatos FROMM"
+          loading="lazy"
         />
       </section>
       <section className="mb-24 py-10">
@@ -53,7 +55,7 @@ export const Ceramica = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Paquetes de azulejos y porcelanatos:</strong> Evita
                 roturas y deslizamientos, asegurando que los lotes lleguen
@@ -61,14 +63,14 @@ export const Ceramica = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Tejas y ladrillos cerámicos:</strong> Agrupa y compacta
                 productos de gran volumen sin comprometer su integridad.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Paletización de piezas cerámicas:</strong> Mantiene la
                 estabilidad de los pallets durante el almacenamiento y
@@ -76,7 +78,7 @@ export const Ceramica = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Fijación de empaques para exportación:</strong> Protege
                 los productos cerámicos en envíos internacionales, reduciendo el
@@ -89,14 +91,14 @@ export const Ceramica = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Alta resistencia y seguridad:</strong> Nuestros zunchos
                 soportan cargas pesadas sin deformarse.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Alternativa ecológica:</strong> El zuncho de PET es
                 reciclable y no daña la cerámica con oxidación o residuos
@@ -104,7 +106,7 @@ export const Ceramica = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Compatibilidad con sistemas de flejado automático y manual:
@@ -113,7 +115,7 @@ export const Ceramica = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Mayor protección durante el transporte:</strong> Reduce
                 vibraciones y movimientos bruscos que pueden afectar la

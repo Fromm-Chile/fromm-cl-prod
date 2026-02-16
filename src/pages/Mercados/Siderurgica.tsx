@@ -78,29 +78,29 @@ export const Siderurgica = () => {
           </p>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>La gran diversidad de formas de carga;</p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>Corrosión y oxidación del metal;</p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>Peso de los productos;</p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>Plazos de entrega cortos;</p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 La influencia del polvo de acero en las condiciones de trabajo;
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>Seguridad y ergonomía de los empleados;</p>
             </li>
           </ul>
@@ -109,7 +109,7 @@ export const Siderurgica = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Flejado de bobinas de acero y aluminio:</strong>{" "}
                 Mantiene unidas las bobinas de metal sin deformaciones ni
@@ -117,7 +117,7 @@ export const Siderurgica = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Aseguramiento de perfiles metálicos, tubos, alambron de acero:
@@ -127,7 +127,7 @@ export const Siderurgica = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Paletización de chapas y láminas metálicas:</strong>{" "}
                 Protege los productos en acero inoxidable, galvanizado o
@@ -135,7 +135,7 @@ export const Siderurgica = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Agrupación de piezas fundidas y maquinadas:</strong>{" "}
                 Facilita la manipulación de componentes pesados en la
@@ -143,7 +143,7 @@ export const Siderurgica = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Sujeción de chatarra y residuos metálicos:</strong>{" "}
                 Optimiza el manejo de material reciclable en plantas de
@@ -156,28 +156,28 @@ export const Siderurgica = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Alta resistencia y sujeción firme:</strong> El zuncho de
                 acero es ideal para cargas extremadamente pesadas.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Alternativa sin corrosión:</strong> El zuncho es una
                 excelente opción para metales sensibles a la oxidación.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Mayor seguridad en el transporte:</strong> Reduce el
                 riesgo de accidentes por cargas sueltas o desestabilizadas.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Compatibilidad con enzunchadoras automáticas y manuales:
@@ -186,7 +186,7 @@ export const Siderurgica = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Aseguramiento de bobinas de papel y cartón:</strong>{" "}
                 Imprescindible en la industria del Packaging para el correcto

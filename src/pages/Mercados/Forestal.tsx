@@ -45,17 +45,20 @@ export const Forestal = () => {
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/mederazuncho.webp"
           className="h-[400px] w-[400px]"
-          alt="zunchos madera"
+          alt="Zunchos de PET para madera"
+          loading="lazy"
         />
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/maderazuncho2.webp"
           className="h-[400px] w-[400px]"
-          alt="zunchos madera"
+          alt="Zunchos de PP para madera"
+          loading="lazy"
         />
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/maderazuncho3.webp"
           className="h-[400px] w-[400px]"
-          alt="zunchos madera"
+          alt="Zunchos de acero para madera"
+          loading="lazy"
         />
       </section>
       <section className="mb-24 py-10">
@@ -70,7 +73,7 @@ export const Forestal = () => {
           </p>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>El zuncho de PET</strong> tiene una excelente
                 elasticidad. Esto garantiza que pueda flejar firmemente paquetes
@@ -80,7 +83,7 @@ export const Forestal = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>El zuncho de PP </strong>es perfecto para trabajos más
                 ligeros, como listones y fardos pequeños. Disponible en varios
@@ -88,7 +91,7 @@ export const Forestal = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>El zuncho de acero</strong> es extremadamente fuerte y,
                 por lo tanto, adecuado para los entornos más duros. El embalaje

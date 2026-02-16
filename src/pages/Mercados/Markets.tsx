@@ -72,7 +72,7 @@ export const Markets = () => {
               <div className="mb-2 hover:font-bold cursor-pointer text-red font-medium transition-hover duration-300 ease-linear">
                 <Link className="flex items-center" to="/mineria">
                   <p>EXPLORA ESTE MERCADO</p>
-                  <img src="/icons/chevronRightSmall.svg" />
+                  <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
                 </Link>
               </div>
             </div>
@@ -80,8 +80,9 @@ export const Markets = () => {
           <div className="mb-20 md:w-[30%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/mineria.jpg"
-              alt="plastic-airpad"
+              alt="Soluciones de embalaje para industria minera"
               className="md:min-h-[400px] md:max-h-[450px] object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -111,7 +112,7 @@ export const Markets = () => {
               <div className="mb-2 hover:font-bold cursor-pointer text-red font-medium transition-hover duration-300 ease-linear">
                 <Link className="flex items-center" to="/forestal">
                   <p>EXPLORA ESTE MERCADO</p>
-                  <img src="/icons/chevronRightSmall.svg" />
+                  <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
                 </Link>
               </div>
             </div>
@@ -119,8 +120,9 @@ export const Markets = () => {
           <div className="mb-20 md:w-[30%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/maderera.jpg"
-              alt="plastic-airpad"
+              alt="Embalaje para industria forestal"
               className="md:min-h-[400px] md:max-h-[450px] object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -148,7 +150,7 @@ export const Markets = () => {
               <div className="mb-2 hover:font-bold cursor-pointer text-red font-medium transition-hover duration-300 ease-linear">
                 <Link className="flex items-center" to="/agricola">
                   <p>EXPLORA ESTE MERCADO</p>
-                  <img src="/icons/chevronRightSmall.svg" />
+                  <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
                 </Link>
               </div>
             </div>
@@ -156,8 +158,9 @@ export const Markets = () => {
           <div className="mb-20 md:w-[30%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/agricultura.jpg"
-              alt="plastic-airpad"
+              alt="Soluciones para industria agrícola"
               className="md:min-h-[400px] md:max-h-[450px] object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -183,7 +186,7 @@ export const Markets = () => {
               <div className="mb-2 hover:font-bold cursor-pointer text-red font-medium transition-hover duration-300 ease-linear">
                 <Link className="flex items-center" to="/siderurgica">
                   <p>EXPLORA ESTE MERCADO</p>
-                  <img src="/icons/chevronRightSmall.svg" />
+                  <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
                 </Link>
               </div>
             </div>
@@ -191,8 +194,9 @@ export const Markets = () => {
           <div className="mb-20 md:w-[30%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/siderurgica.jpg"
-              alt="plastic-airpad"
+              alt="Soluciones para industria siderúrgica"
               className="md:min-h-[400px] md:max-h-[450px] object-cover"
+              loading="lazy"
             />
           </div>
         </div>

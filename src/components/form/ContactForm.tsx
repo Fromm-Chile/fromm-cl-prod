@@ -123,14 +123,14 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
             </div>
             <div className="px-6 py-2 mt-8 rounded-lg max-w-[90%] md:w-[50%]">
               <div className="md:w-[250px] md:h-[250px] h-[100px] w-[100px] m-auto mb-10">
-                <img src="/icons/contacthelp.svg" />
+                <img src="/icons/contacthelp.svg" alt="" aria-hidden="true" />
               </div>
               <div className="flex items-center justify-start gap-4 mb-2">
-                <img src="/icons/Layout/phone.svg" height={30} width={30} />
+                <img src="/icons/Layout/phone.svg" height={30} width={30} alt="" aria-hidden="true" />
                 <p className="text-textGray font-light">+56 2 2571 1100</p>
               </div>
               <div className="flex items-center justify-start gap-4 mb-2">
-                <img src="/icons/Layout/mail.svg" height={30} width={30} />
+                <img src="/icons/Layout/mail.svg" height={30} width={30} alt="" aria-hidden="true" />
                 <a
                   href="mailto:contacto@fromm-pack.cl"
                   className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear"
@@ -139,7 +139,7 @@ export const ContactForm = ({ titulo, descripcion }: ContactFormProps) => {
                 </a>
               </div>
               <div className="flex items-center justify-start gap-4 mb-2">
-                <img src="/icons/instantmessage.svg" height={30} width={30} />
+                <img src="/icons/instantmessage.svg" height={30} width={30} alt="" aria-hidden="true" />
                 <a
                   href="https://api.whatsapp.com/send?phone=56939522069"
                   target="_blank"

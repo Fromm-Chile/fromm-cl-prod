@@ -36,7 +36,8 @@ export const Envases = () => {
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/envases.png"
           className="h-[400px] w-[400px]"
-          alt="envases"
+          alt="Solución de embalaje para industria de envases FROMM"
+          loading="lazy"
         />
       </section>
       <section className="mb-24 py-10">
@@ -46,7 +47,7 @@ export const Envases = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Agrupación de botellas y contenedores plásticos:
@@ -56,7 +57,7 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Flejado de cajas de cartón:</strong> Asegura la
                 integridad de los paquetes de productos enlatados, alimentos
@@ -64,7 +65,7 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Paletización de envases de vidrio:</strong> Evita el
                 movimiento de botellas y frascos de vidrio durante el transporte
@@ -72,7 +73,7 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Aseguramiento de bobinas de papel y cartón:</strong>{" "}
                 Imprescindible en la industria del Packaging para el correcto
@@ -80,7 +81,7 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Sujeción de empaques industriales:</strong> Compatible
                 con grandes volúmenes de envases flexibles, garantizando
@@ -93,14 +94,14 @@ export const Envases = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Alta resistencia y seguridad:</strong> Adaptables a
                 distintos tipos de empaques sin dañarlos.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Solución sustentable:</strong> El zuncho de PET es
                 reciclable y libre de corrosión, ideal para industrias con
@@ -108,14 +109,14 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Optimización de costos logísticos:</strong> Reduce daños
                 en el transporte y mejora la eficiencia en líneas de embalaje.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Compatibilidad con sistemas de flejado automático y manual:

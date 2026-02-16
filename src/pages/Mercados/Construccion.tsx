@@ -37,17 +37,20 @@ export const Construccion = () => {
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/construccion1.jpg"
           className="h-[400px] w-[400px]"
-          alt="perfiles metal"
+          alt="Zunchos FROMM para embalaje de perfiles metálicos en construcción"
+          loading="lazy"
         />
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/construccion2.jpg"
           className="h-[400px] w-[400px]"
-          alt="rollos alambre"
+          alt="Flejado de rollos de alambre con zunchos de acero FROMM"
+          loading="lazy"
         />
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/construccion3.jpg"
           className="h-[400px] w-[400px]"
-          alt="rollos acero zuncho"
+          alt="Solución de zunchos para asegurar rollos de acero en construcción"
+          loading="lazy"
         />
       </section>
       <section className="mb-24 py-10">
@@ -57,28 +60,28 @@ export const Construccion = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Alta resistencia a la tensión y absorción de impactos, ideal
                 para asegurar ladrillos, bloques de hormigón, madera y más.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 No se oxida ni daña los materiales, evitando costos adicionales
                 por deterioro.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Alternativa ecológica y liviana frente al acero, reduciendo el
                 peso sin comprometer la seguridad.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Compatible con herramientas y sistemas de flejado automáticos y
                 manuales.
@@ -90,21 +93,21 @@ export const Construccion = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Ideal para aplicaciones que requieren máxima resistencia, como
                 el transporte de vigas, tuberías y estructuras metálicas.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Alta resistencia a la tracción y estabilidad ante condiciones
                 extremas.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Recomendado para asegurar cargas expuestas a temperaturas
                 elevadas o almacenamiento prolongado.
@@ -116,28 +119,28 @@ export const Construccion = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Calidad certificada y tecnología de punta en soluciones de
                 embalaje.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 No se oxida ni daña los materiales, evitando costos adicionales
                 por deterioro.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Amplia gama de zunchos y herramientas para garantizar la mejor
                 aplicación.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Asesoría especializada para seleccionar el tipo de zuncho ideal
                 según cada necesidad.
