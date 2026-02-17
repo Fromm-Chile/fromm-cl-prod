@@ -11,7 +11,7 @@ export const Navbar = () => {
     <>
       <div className="hidden lg:flex bg-primaryGray h-[45px] lg:items-center lg:justify-end lg:pr-16 text-textGray gap-16">
         <Link to="/" className="flex gap-1 cursor-pointer hover:underline">
-          <img src="/icons/phoneGray.svg" height={23} width={23} />
+          <img src="/icons/phoneGray.svg" height={23} width={23} alt="" aria-hidden="true" />
           <p>+56 2 2571 1100</p>
         </Link>
         <div className="cursor-pointer hover:underline">
@@ -40,6 +40,8 @@ export const Navbar = () => {
             className="max-w-[250px] xl:max-w-[350px]"
             src="/img/Navbar/FrommLogo.webp"
             alt="fromm-chile"
+            width={350}
+            height={60}
           />
         </Link>
         <div className="hidden lg:flex justify-between items-center">
@@ -58,7 +60,7 @@ export const Navbar = () => {
                         {item.submenu.map((submenu) => (
                           <Link to={submenu.link} key={submenu.id}>
                             <li className="p-1 hover:font-extrabold cursor-pointer flex items-center transition-all duration-300 ease-in">
-                              <img src="/icons/chevronRightSmall.svg" />
+                              <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
                               {submenu.name}
                             </li>
                           </Link>

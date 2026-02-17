@@ -24,6 +24,7 @@ export const ProductCard = ({
           <img
             src={srcImg}
             alt={alt}
+            loading="lazy"
             className="h-[250px] w-[250px] m-auto object-contain"
           />
           <div>

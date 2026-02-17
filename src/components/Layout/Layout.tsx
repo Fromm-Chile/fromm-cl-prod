@@ -20,8 +20,10 @@ export const Layout = () => {
         >
           <img
             src="/icons/whatsapp.svg"
-            alt="mensajeria-movil"
+            alt="Contactar por WhatsApp"
             className="lg:w-20 lg:h-20 w-16 h-16 hover:border-2 hover:border-red hover:shadow-2xl hover:rounded-xl transition-all duration-300 ease-in-out"
+            width={80}
+            height={80}
           />
         </a>
       </div>
@@ -30,14 +32,20 @@ export const Layout = () => {
       <footer className="bg-primaryGray h-auto flex flex-col items-center pt-16 pb-9 md:px-32 w-full relative">
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/sgs.png"
-          alt="sgs-certifiacion"
+          alt="Certificación SGS de calidad FROMM Chile"
           className="rounded-lg lg:w-[220px] lg:h-[140px] w-[180px] h-[110px] lg:rounded-xl absolute lg:top-[18px] lg:right-[285px] bottom-[213px] right-[30px]"
+          width={220}
+          height={140}
+          loading="lazy"
         />
         <Link className="mb-14" to="/">
           <img
             className="max-w-[310px]"
             src="/img/Navbar/FrommLogo.webp"
             alt="fromm-chile"
+            width={310}
+            height={53}
+            loading="lazy"
           />
         </Link>
         <div className="lg:flex w-full justify-between">
@@ -56,25 +64,25 @@ export const Layout = () => {
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/soluciones">
                 <p>Soluciones</p>
-                <img src="/icons/chevronRightSmall.svg" />
+                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/mercados">
                 <p>Mercados</p>
-                <img src="/icons/chevronRightSmall.svg" />
+                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/nosotros">
                 <p>Acerca de Fromm</p>
-                <img src="/icons/chevronRightSmall.svg" />
+                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/productos">
                 <p>Productos</p>
-                <img src="/icons/chevronRightSmall.svg" />
+                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
               </Link>
             </li>
           </ul>
@@ -84,14 +92,14 @@ export const Layout = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/icons/Navbar/instagram.svg" width={30} height={30} />
+              <img src="/icons/Navbar/instagram.svg" width={30} height={30} alt="Instagram FROMM Chile" />
             </a>
             <a
               href="https://www.linkedin.com/company/fromm-chile-s-a/posts/?feedView=all&viewAsMember=true"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/icons/Navbar/linkedin.svg" width={30} height={30} />
+              <img src="/icons/Navbar/linkedin.svg" width={30} height={30} alt="LinkedIn FROMM Chile" />
             </a>
           </div>
           <div className="hidden lg:block self-start ml-8 mb-6 relative">
@@ -152,7 +160,7 @@ export const Layout = () => {
         </div>
         <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center w-[90%] lg:mb-0">
           <p className="text-textGray font-light mt-4">
-            © 2025 Fromm Chile. Todos los derechos reservados.
+            © 2026 Fromm Chile. Todos los derechos reservados.
           </p>
         </div>
         <div
@@ -166,6 +174,8 @@ export const Layout = () => {
                 className="max-w-[250px] m-auto mt-6 mb-10"
                 src="/img/Navbar/FrommLogo.webp"
                 alt="fromm-chile"
+                width={250}
+                height={43}
               />
               <div className="m-auto w-full flex justify-center items-center">
                 <ul className=" text-xl font-light text-textGray flex flex-col gap-4 items-start w-full">
@@ -186,11 +196,11 @@ export const Layout = () => {
             </div>
             <div className="border-[1px] border-red px-6 py-2 mt-8 rounded-lg m-auto max-w-[90%]">
               <div className="flex items-center justify-start gap-4 mb-2">
-                <img src="/icons/Layout/phone.svg" height={30} width={30} />
+                <img src="/icons/Layout/phone.svg" height={30} width={30} alt="" aria-hidden="true" />
                 <p className="text-textGray font-light">+56 2 2571 1100</p>
               </div>
               <div className="flex items-center justify-start gap-4">
-                <img src="/icons/Layout/mail.svg" height={30} width={30} />
+                <img src="/icons/Layout/mail.svg" height={30} width={30} alt="" aria-hidden="true" />
                 <a
                   href="mailto:contacto@fromm-pack.cl"
                   onClick={() => setIsOpen(false)}
@@ -200,7 +210,7 @@ export const Layout = () => {
                 </a>
               </div>
               <div className="flex items-center justify-start gap-4 ml-[-9px]">
-                <img src="/icons/money.svg" />
+                <img src="/icons/money.svg" alt="" aria-hidden="true" width={40} height={40} />
                 <Link
                   to="/cotizacion"
                   className="ml-[-10px]"
@@ -233,6 +243,9 @@ export const Layout = () => {
             >
               <img
                 src={isOpen ? "/icons/closeMob.svg" : "/icons/menuMob.svg"}
+                alt={isOpen ? "Cerrar menú" : "Abrir menú"}
+                width={40}
+                height={40}
               />
             </div>
             <div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ContactForm } from "../../components/form/ContactForm";
 import { InfoAcordeon } from "../../components/ui/InfoAcordeon";
 import { InfoBanner } from "../../components/ui/InfoBanner";
@@ -111,6 +112,7 @@ export const MaquinasEnvolvedoras = () => {
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fotoenvolvedora3.jpeg"
               alt="maquina-envolvedora"
+              loading="lazy"
             />
           </div>
         </div>
@@ -142,9 +144,47 @@ export const MaquinasEnvolvedoras = () => {
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/envolvedorafoto2.webp"
               alt="maquina-envolvedora"
+              loading="lazy"
               className=""
             />
           </div>
+        </div>
+      </section>
+      <section className="px-10 mb-10 md:max-w-[875px] md:m-auto">
+        <h3 className="text-textGray text-lg font-bold mb-6 md:text-2xl">
+          Mercados que atendemos
+        </h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <Link to="/mineria" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Minería</p>
+          </Link>
+          <Link to="/forestal" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Forestal</p>
+          </Link>
+          <Link to="/siderurgica" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Siderúrgica</p>
+          </Link>
+          <Link to="/agricola" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Agrícola</p>
+          </Link>
+          <Link to="/construccion" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Construcción</p>
+          </Link>
+          <Link to="/ceramica" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Cerámica</p>
+          </Link>
+          <Link to="/envases" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Envases</p>
+          </Link>
+          <Link to="/fibras-textiles" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Fibras Textiles</p>
+          </Link>
+          <Link to="/papel" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Papel</p>
+          </Link>
+          <Link to="/vidrio" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Vidrio</p>
+          </Link>
         </div>
       </section>
       <ContactForm

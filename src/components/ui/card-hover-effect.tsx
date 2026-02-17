@@ -47,6 +47,8 @@ export const HoverEffect = ({
           <Card className="text-center hover:shadow-lg">
             <img
               src={item.img}
+              alt={`Solución de embalaje ${item.name} - FROMM Chile`}
+              loading="lazy"
               className="w-full md:h-[450px] h-[250px] object-contain"
             />
             <CardTitle>{item.name}</CardTitle>

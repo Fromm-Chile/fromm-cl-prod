@@ -17,9 +17,9 @@ export const InfoAcordeon = () => {
           >
             <p>{service.title}</p>
             {openAcordeon === service.id ? (
-              <img src="/icons/minusIcon.svg" />
+              <img src="/icons/minusIcon.svg" alt="Contraer" />
             ) : (
-              <img src="/icons/plusIcon.svg" />
+              <img src="/icons/plusIcon.svg" alt="Expandir" />
             )}
           </div>
           <div
