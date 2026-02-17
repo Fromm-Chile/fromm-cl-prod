@@ -40,6 +40,8 @@ export const Navbar = () => {
             className="max-w-[250px] xl:max-w-[350px]"
             src="/img/Navbar/FrommLogo.webp"
             alt="fromm-chile"
+            width={350}
+            height={60}
           />
         </Link>
         <div className="hidden lg:flex justify-between items-center">
@@ -58,7 +60,7 @@ export const Navbar = () => {
                         {item.submenu.map((submenu) => (
                           <Link to={submenu.link} key={submenu.id}>
                             <li className="p-1 hover:font-extrabold cursor-pointer flex items-center transition-all duration-300 ease-in">
-                              <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
+                              <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
                               {submenu.name}
                             </li>
                           </Link>

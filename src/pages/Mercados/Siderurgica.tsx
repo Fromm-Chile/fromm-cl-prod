@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ContactForm } from "../../components/form/ContactForm";
 import { InfoBanner } from "../../components/ui/InfoBanner";
 
@@ -40,16 +41,19 @@ export const Siderurgica = () => {
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/perfilesmetal.jpeg"
           className="h-[400px] w-[400px]"
           alt="perfiles metal"
+          loading="lazy"
         />
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/rollosalambre.jpeg"
           className="h-[400px] w-[400px]"
           alt="rollos alambre"
+          loading="lazy"
         />
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/rollosacerozuncho.jpeg"
           className="h-[400px] w-[400px]"
           alt="rollos acero zuncho"
+          loading="lazy"
         />
       </section>
       <section className="mb-24 py-10">
@@ -207,6 +211,25 @@ export const Siderurgica = () => {
             saber qué podemos hacer por usted? ¡Estaremos encantados de
             planificar su período de amortización y sus ahorros!
           </p>
+        </div>
+      </section>
+      <section className="px-10 mb-10 md:max-w-[875px] md:m-auto">
+        <h3 className="text-textGray text-lg font-bold mb-6 md:text-2xl">
+          Soluciones relacionadas
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Link to="/zunchos-herramientas" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Zunchos y Herramientas</p>
+            <p className="text-sm text-textGray">Enzunchadoras y zunchos de alta resistencia</p>
+          </Link>
+          <Link to="/envolvedora" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Envolvedoras</p>
+            <p className="text-sm text-textGray">Máquinas envolvedoras industriales</p>
+          </Link>
+          <Link to="/productos" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Ver Productos</p>
+            <p className="text-sm text-textGray">Catálogo completo de productos</p>
+          </Link>
         </div>
       </section>
       <ContactForm

@@ -103,6 +103,7 @@ export const ProductDetails = () => {
                       <img
                         src={productDetails.srcImg[currentImage]}
                         alt={productDetails.alt}
+                        loading="lazy"
                         className="w-[400px] h-[400px] m-auto rounded-2xl object-contain"
                       />
                     )}
@@ -137,9 +138,9 @@ export const ProductDetails = () => {
               </div>
               <div className="md:w-[45%]">
                 <div className="flex flex-col gap-5 mt-5">
-                  <h2 className="text-4xl font-bold mt-5 mb-2">
+                  <h1 className="text-4xl font-bold mt-5 mb-2">
                     {productDetails?.name}
-                  </h2>
+                  </h1>
                 </div>
                 <p>{productDetails?.desc || ""}</p>
                 {isProductInInvoice ? (

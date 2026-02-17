@@ -49,9 +49,9 @@ export const InfoBanner = ({
           <p className="child font-extralight tracking-widest md:mt-5 md:text-2xl text-left">
             {category}
           </p>
-          <p className="child font-bold text-2xl md:text-3xl text-left">
+          <h1 className="child font-bold text-2xl md:text-3xl text-left">
             {title}
-          </p>
+          </h1>
           <p className="child font-extralight md:text-lg">{desc}</p>
           {sinBoton ? null : (
             <Button link={link} whiteButton onClick={onClick}>

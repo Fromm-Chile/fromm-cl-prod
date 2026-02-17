@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ContactForm } from "../../components/form/ContactForm";
 import { InfoBanner } from "../../components/ui/InfoBanner";
 
@@ -121,6 +122,25 @@ export const FibrasTextiles = () => {
               </p>
             </li>
           </ul>
+        </div>
+      </section>
+      <section className="px-10 mb-10 md:max-w-[875px] md:m-auto">
+        <h3 className="text-textGray text-lg font-bold mb-6 md:text-2xl">
+          Soluciones relacionadas
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Link to="/zunchos-herramientas" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Zunchos y Herramientas</p>
+            <p className="text-sm text-textGray">Enzunchadoras y zunchos de alta resistencia</p>
+          </Link>
+          <Link to="/envolvedora" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Envolvedoras</p>
+            <p className="text-sm text-textGray">Máquinas envolvedoras industriales</p>
+          </Link>
+          <Link to="/productos" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Ver Productos</p>
+            <p className="text-sm text-textGray">Catálogo completo de productos</p>
+          </Link>
         </div>
       </section>
       <ContactForm

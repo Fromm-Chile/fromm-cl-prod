@@ -22,6 +22,8 @@ export const Layout = () => {
             src="/icons/whatsapp.svg"
             alt="Contactar por WhatsApp"
             className="lg:w-20 lg:h-20 w-16 h-16 hover:border-2 hover:border-red hover:shadow-2xl hover:rounded-xl transition-all duration-300 ease-in-out"
+            width={80}
+            height={80}
           />
         </a>
       </div>
@@ -32,12 +34,18 @@ export const Layout = () => {
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/sgs.png"
           alt="Certificación SGS de calidad FROMM Chile"
           className="rounded-lg lg:w-[220px] lg:h-[140px] w-[180px] h-[110px] lg:rounded-xl absolute lg:top-[18px] lg:right-[285px] bottom-[213px] right-[30px]"
+          width={220}
+          height={140}
+          loading="lazy"
         />
         <Link className="mb-14" to="/">
           <img
             className="max-w-[310px]"
             src="/img/Navbar/FrommLogo.webp"
             alt="fromm-chile"
+            width={310}
+            height={53}
+            loading="lazy"
           />
         </Link>
         <div className="lg:flex w-full justify-between">
@@ -56,25 +64,25 @@ export const Layout = () => {
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/soluciones">
                 <p>Soluciones</p>
-                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
+                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/mercados">
                 <p>Mercados</p>
-                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
+                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/nosotros">
                 <p>Acerca de Fromm</p>
-                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
+                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/productos">
                 <p>Productos</p>
-                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" />
+                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
               </Link>
             </li>
           </ul>
@@ -166,6 +174,8 @@ export const Layout = () => {
                 className="max-w-[250px] m-auto mt-6 mb-10"
                 src="/img/Navbar/FrommLogo.webp"
                 alt="fromm-chile"
+                width={250}
+                height={43}
               />
               <div className="m-auto w-full flex justify-center items-center">
                 <ul className=" text-xl font-light text-textGray flex flex-col gap-4 items-start w-full">
@@ -200,7 +210,7 @@ export const Layout = () => {
                 </a>
               </div>
               <div className="flex items-center justify-start gap-4 ml-[-9px]">
-                <img src="/icons/money.svg" alt="" aria-hidden="true" />
+                <img src="/icons/money.svg" alt="" aria-hidden="true" width={40} height={40} />
                 <Link
                   to="/cotizacion"
                   className="ml-[-10px]"
@@ -234,6 +244,8 @@ export const Layout = () => {
               <img
                 src={isOpen ? "/icons/closeMob.svg" : "/icons/menuMob.svg"}
                 alt={isOpen ? "Cerrar menú" : "Abrir menú"}
+                width={40}
+                height={40}
               />
             </div>
             <div>
