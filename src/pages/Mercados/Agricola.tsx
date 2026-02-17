@@ -94,17 +94,30 @@ export const Agricola = () => {
           Soluciones relacionadas
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Link to="/zunchos-herramientas" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+          <Link
+            to="/zunchos-herramientas"
+            className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow"
+          >
             <p className="text-red font-medium">Zunchos y Herramientas</p>
-            <p className="text-sm text-textGray">Enzunchadoras y zunchos de alta resistencia</p>
+            <p className="text-sm text-textGray">
+              Enzunchadoras y zunchos de alta resistencia
+            </p>
           </Link>
-          <Link to="/envolvedora" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+          <Link
+            to="/envolvedora"
+            className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow"
+          >
             <p className="text-red font-medium">Envolvedoras</p>
-            <p className="text-sm text-textGray">Máquinas envolvedoras industriales</p>
+            <p className="text-sm text-textGray">Máquinas envolvedoras</p>
           </Link>
-          <Link to="/productos" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+          <Link
+            to="/productos"
+            className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow"
+          >
             <p className="text-red font-medium">Ver Productos</p>
-            <p className="text-sm text-textGray">Catálogo completo de productos</p>
+            <p className="text-sm text-textGray">
+              Catálogo completo de productos
+            </p>
           </Link>
         </div>
       </section>
