@@ -59,7 +59,7 @@ export const Home = () => {
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
               alt="home-picture"
-              className="h-[450px] object-cover lg:hidden"
+              className="h-auto object-cover lg:hidden m-auto"
             />
             <Swiper
               modules={[Autoplay]}
@@ -87,7 +87,7 @@ export const Home = () => {
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
               alt="home-picture"
-              className="w-full h-[450px] object-cover lg:hidden"
+              className="h-auto object-cover lg:hidden m-auto"
             />
             <video
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fromm-chile.mp4"
