@@ -81,8 +81,9 @@ export const AboutUs = () => {
           <div className="md:w-[40%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/automated-packaging.webp"
-              alt="sistemas-de-embalaje"
+              alt="Sistemas de embalaje automatizado FROMM"
               className="h-[300px] w-full"
+              loading="lazy"
             />
           </div>
         </div>
@@ -107,8 +108,9 @@ export const AboutUs = () => {
           <div className="md:w-[40%]">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/Reinhard-Fromm.jpg"
-              alt="maquina-enzunchadora"
+              alt="Reinhard Fromm - Fundador de FROMM"
               className=""
+              loading="lazy"
             />
           </div>
         </div>
@@ -163,20 +165,20 @@ export const AboutUs = () => {
           </h3>
           <ul className="flex flex-col gap-2 md:text-lg">
             <li className="flex gap-2 items-center">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Equipos de bajo mantenimiento y consumibles de alta calidad;
               </p>
             </li>
             <li className="flex gap-2 items-center">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 Atención personalizada de especialistas que optimizan su proceso
                 de empaque;
               </p>
             </li>
             <li className="flex gap-2 items-center">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>Acuerdos claros en cuanto a servicio y mantenimiento;</p>
             </li>
           </ul>
@@ -184,8 +186,9 @@ export const AboutUs = () => {
         <div className="my-10 md:my-20">
           <img
             src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fromm-mundo.svg"
-            alt="maquina-enzunchadora"
+            alt="Mapa de presencia global de FROMM en más de 50 países"
             className=""
+            loading="lazy"
           />
         </div>
       </section>

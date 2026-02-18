@@ -48,17 +48,20 @@ export const Home = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <title>Fromm Chile</title>
+      <title>
+        FROMM Chile | Soluciones de Embalaje Industrial - Zunchos, Envolvedoras
+        y Airpads
+      </title>
       <meta
         name="description"
-        content="información de la empresa y productos"
+        content="FROMM Chile - Especialistas en soluciones de embalaje industrial: zunchos de acero y poliéster, envolvedoras de stretch film, airpads y máquinas flejadoras. Representantes de FROMM Suiza en Chile."
       />
       <section>
         {swiperData.length > 0 ? (
           <div className="relative">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
-              alt="home-picture"
+              alt="Planta de embalaje industrial FROMM Chile"
               className="h-auto object-cover lg:hidden m-auto"
             />
             <Swiper
@@ -86,7 +89,7 @@ export const Home = () => {
           <div className="relative">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
-              alt="home-picture"
+              alt="Planta de embalaje industrial FROMM Chile"
               className="h-auto object-cover lg:hidden m-auto"
             />
             <video
@@ -112,9 +115,11 @@ export const Home = () => {
                 <img
                   className="transition-transform duration-300 group-hover:-translate-x-2"
                   src="/icons/chevronRight.svg"
+                  alt=""
+                  aria-hidden="true"
                 />
                 <div>
-                  <h3 className="font-medium text-textGray">SOLUCIONES</h3>
+                  <p className="font-medium text-textGray">SOLUCIONES</p>
                   <p>ZUNCHOS</p>
                 </div>
               </Link>
@@ -124,10 +129,12 @@ export const Home = () => {
                 <img
                   className="transition-transform duration-300 group-hover:-translate-x-2"
                   src="/icons/chevronRight.svg"
+                  alt=""
+                  aria-hidden="true"
                 />
 
                 <div>
-                  <h3 className="font-medium text-textGray">SOLUCIONES</h3>
+                  <p className="font-medium text-textGray">SOLUCIONES</p>
                   <p>HERRAMIENTAS</p>
                 </div>
               </Link>
@@ -140,9 +147,11 @@ export const Home = () => {
                 <img
                   className="transition-transform duration-300 group-hover:-translate-x-2"
                   src="/icons/chevronRight.svg"
+                  alt=""
+                  aria-hidden="true"
                 />
                 <div>
-                  <h3 className="font-medium text-textGray">SOLUCIONES</h3>
+                  <p className="font-medium text-textGray">SOLUCIONES</p>
                   <p>SERVICIO TECNICO</p>
                 </div>
               </Link>
@@ -159,19 +168,21 @@ export const Home = () => {
               </p>
               <p className="text-2xl font-bold text-textGray">FROMM CHILE</p>
               <p className="text-2xl font-extralight text-textGray text-left">
-                TRANSFORMAMOS EL EMBAJALE EN UNA EXPERIENCIA
+                TRANSFORMAMOS EL EMBALAJE EN UNA EXPERIENCIA
               </p>
               <img
                 src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/sgs.png"
-                alt="sgs-certifiacion"
+                alt="Certificación SGS de calidad FROMM Chile"
                 className="rounded-lg mt-8 mb-4 lg:mb-0 lg:w-[350px] lg:h-[230px] w-[280px] h-[180px] lg:rounded-xl m-auto"
+                loading="lazy"
               />
             </div>
             <div className="flex flex-col gap-8 justify-center items-center lg:flex-col-reverse lg:w-[50%]">
               <img
                 className="border-b-2 border-black lg:h-36"
                 src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/equipoFromm.webp"
-                alt="fromm-team"
+                alt="Equipo de trabajo FROMM Chile"
+                loading="lazy"
               />
               <p className="font-extralight text-lg text-textGray text-justify">
                 El grupo FROMM desarrolla y fabrica diferentes sistemas de
@@ -196,11 +207,11 @@ export const Home = () => {
         </div>
         <section className="bg-primaryGray mb-24 py-10">
           <div className="max-w-[75%] m-auto flex flex-col gap-5">
-            <h3 className="font-extralight text-xl text-red tracking-widest">
+            <h2 className="font-extralight text-xl text-red tracking-widest">
               INDUSTRIAS
-            </h3>
+            </h2>
             <p className="text-textGray font-semibold text-2xl text-left">
-              ENTREGAMOS LA SOLUCION PERFECTA PARA CADA MERCADO
+              ENTREGAMOS LA SOLUCIÓN PERFECTA PARA CADA MERCADO
             </p>
             <p className="text-justify">
               Desde la industria del hormigón hasta los centros de distribución
@@ -217,9 +228,9 @@ export const Home = () => {
         </section>
         <section className="mb-24 py-10">
           <div className="max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%] text-justify lg:font-light">
-            <h3 className="text-textGray font-semibold text-2xl text-left">
+            <h2 className="text-textGray font-semibold text-2xl text-left">
               ESPECIALISTAS EN SOLUCIONES DE EMBALAJE
-            </h3>
+            </h2>
             <p className="text-justify">
               Somos FROMM, especialistas en soluciones de embalaje. Desde
               nuestra sede central en Suiza, nuestros especialistas trabajan día
@@ -256,8 +267,8 @@ export const Home = () => {
           <div className="my-10 md:my-20">
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fromm-mundo.svg"
-              alt="maquina-enzunchadora"
-              className=""
+              alt="Mapa de presencia global de FROMM en más de 50 países"
+              loading="lazy"
             />
           </div>
         </section>

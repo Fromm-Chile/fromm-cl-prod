@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ContactForm } from "../../components/form/ContactForm";
 import { InfoBanner } from "../../components/ui/InfoBanner";
 
@@ -36,7 +37,8 @@ export const Envases = () => {
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/envases.png"
           className="h-[400px] w-[400px]"
-          alt="envases"
+          alt="Solución de embalaje para industria de envases FROMM"
+          loading="lazy"
         />
       </section>
       <section className="mb-24 py-10">
@@ -46,7 +48,7 @@ export const Envases = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Agrupación de botellas y contenedores plásticos:
@@ -56,7 +58,7 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Flejado de cajas de cartón:</strong> Asegura la
                 integridad de los paquetes de productos enlatados, alimentos
@@ -64,7 +66,7 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Paletización de envases de vidrio:</strong> Evita el
                 movimiento de botellas y frascos de vidrio durante el transporte
@@ -72,7 +74,7 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Aseguramiento de bobinas de papel y cartón:</strong>{" "}
                 Imprescindible en la industria del Packaging para el correcto
@@ -80,7 +82,7 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Sujeción de empaques industriales:</strong> Compatible
                 con grandes volúmenes de envases flexibles, garantizando
@@ -93,14 +95,14 @@ export const Envases = () => {
           </h3>
           <ul className="flex flex-col gap-5 my-5">
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Alta resistencia y seguridad:</strong> Adaptables a
                 distintos tipos de empaques sin dañarlos.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Solución sustentable:</strong> El zuncho de PET es
                 reciclable y libre de corrosión, ideal para industrias con
@@ -108,14 +110,14 @@ export const Envases = () => {
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>Optimización de costos logísticos:</strong> Reduce daños
                 en el transporte y mejora la eficiencia en líneas de embalaje.
               </p>
             </li>
             <li className="flex gap-2 items-start">
-              <img src="/icons/checkList.svg" />
+              <img src="/icons/checkList.svg" alt="" aria-hidden="true" />
               <p>
                 <strong>
                   Compatibilidad con sistemas de flejado automático y manual:
@@ -124,6 +126,25 @@ export const Envases = () => {
               </p>
             </li>
           </ul>
+        </div>
+      </section>
+      <section className="px-10 mb-10 md:max-w-[875px] md:m-auto">
+        <h3 className="text-textGray text-lg font-bold mb-6 md:text-2xl">
+          Soluciones relacionadas
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Link to="/zunchos-herramientas" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Zunchos y Herramientas</p>
+            <p className="text-sm text-textGray">Enzunchadoras y zunchos de alta resistencia</p>
+          </Link>
+          <Link to="/film-embalaje" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Film de Embalaje</p>
+            <p className="text-sm text-textGray">Protección de productos con film estirable</p>
+          </Link>
+          <Link to="/productos" className="p-4 bg-primaryGray rounded-lg hover:shadow-md transition-shadow">
+            <p className="text-red font-medium">Ver Productos</p>
+            <p className="text-sm text-textGray">Catálogo completo de productos</p>
+          </Link>
         </div>
       </section>
       <ContactForm

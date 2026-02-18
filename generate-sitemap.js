@@ -10,23 +10,25 @@ const links = [
   { url: '/envolvedora', changefreq: 'weekly', priority: 0.8 },
   { url: '/film-embalaje', changefreq: 'weekly', priority: 0.8 },
   { url: '/productos', changefreq: 'weekly', priority: 0.8 },
-  { url: '/productos/:slug', changefreq: 'weekly', priority: 0.8 },
   { url: '/cotizacion', changefreq: 'monthly', priority: 0.7 },
-  { url: '/confirmacion', changefreq: 'monthly', priority: 0.7 },
   { url: '/servicio-tecnico', changefreq: 'monthly', priority: 0.7 },
   { url: '/zunchos-herramientas', changefreq: 'monthly', priority: 0.7 },
-  { url: '/recursos', changefreq: 'monthly', priority: 0.7 },
   { url: '/Airpads', changefreq: 'monthly', priority: 0.7 },
-  { url: '/mercados', changefreq: 'monthly', priority: 0.7 },
+  { url: '/mercados', changefreq: 'monthly', priority: 0.8 },
   { url: '/mineria', changefreq: 'monthly', priority: 0.7 },
   { url: '/forestal', changefreq: 'monthly', priority: 0.7 },
   { url: '/siderurgica', changefreq: 'monthly', priority: 0.7 },
   { url: '/agricola', changefreq: 'monthly', priority: 0.7 },
+  { url: '/construccion', changefreq: 'monthly', priority: 0.7 },
+  { url: '/ceramica', changefreq: 'monthly', priority: 0.7 },
+  { url: '/envases', changefreq: 'monthly', priority: 0.7 },
+  { url: '/fibras-textiles', changefreq: 'monthly', priority: 0.7 },
+  { url: '/papel', changefreq: 'monthly', priority: 0.7 },
+  { url: '/vidrio', changefreq: 'monthly', priority: 0.7 },
   { url: '/nosotros', changefreq: 'monthly', priority: 0.7 },
   { url: '/politica-calidad', changefreq: 'monthly', priority: 0.7 },
   { url: '/codigo-etica', changefreq: 'monthly', priority: 0.7 },
   { url: '/Contacto', changefreq: 'monthly', priority: 0.7 },
-  { url: '/noticias', changefreq: 'monthly', priority: 0.7 },
   { url: '/productos/enzunchadora-batería-p331?producto=8', changefreq: 'monthly', priority: 0.7 },
   { url: '/productos/enzunchadora-manual-p403?producto=10', changefreq: 'monthly', priority: 0.7 },
   { url: '/productos/enzunchadora-manual-p404?producto=11', changefreq: 'monthly', priority: 0.7 },
@@ -96,7 +98,7 @@ const links = [
 ];
 
 const sitemap = new SitemapStream({ hostname: 'https://fromm-pack.cl' });
-const writeStream = createWriteStream(resolve('public', 'sitemap.xml'));
+const writeStream = createWriteStream(resolve('dist', 'sitemap.xml'));
 
 const pipelineAsync = promisify(pipeline);
 
