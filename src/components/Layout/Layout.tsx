@@ -14,7 +14,7 @@ export const Layout = () => {
     <>
       <div className="fixed lg:bottom-0 lg:right-0 bottom-24 right-1 z-[1000] m-5 cursor-pointer">
         <a
-          href="https://api.whatsapp.com/send?phone=56939522069"
+          href="https://api.whatsapp.com/send?phone=56923861404"
           target="_blank"
           rel="noreferrer"
         >
@@ -64,25 +64,49 @@ export const Layout = () => {
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/soluciones">
                 <p>Soluciones</p>
-                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
+                <img
+                  src="/icons/chevronRightSmall.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width={16}
+                  height={16}
+                />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/mercados">
                 <p>Mercados</p>
-                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
+                <img
+                  src="/icons/chevronRightSmall.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width={16}
+                  height={16}
+                />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/nosotros">
                 <p>Acerca de Fromm</p>
-                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
+                <img
+                  src="/icons/chevronRightSmall.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width={16}
+                  height={16}
+                />
               </Link>
             </li>
             <li className="mb-2 hover:font-bold cursor-pointer">
               <Link className="flex items-center" to="/productos">
                 <p>Productos</p>
-                <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
+                <img
+                  src="/icons/chevronRightSmall.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width={16}
+                  height={16}
+                />
               </Link>
             </li>
           </ul>
@@ -92,14 +116,24 @@ export const Layout = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/icons/Navbar/instagram.svg" width={30} height={30} alt="Instagram FROMM Chile" />
+              <img
+                src="/icons/Navbar/instagram.svg"
+                width={30}
+                height={30}
+                alt="Instagram FROMM Chile"
+              />
             </a>
             <a
               href="https://www.linkedin.com/company/fromm-chile-s-a/posts/?feedView=all&viewAsMember=true"
               target="_blank"
               rel="noreferrer"
             >
-              <img src="/icons/Navbar/linkedin.svg" width={30} height={30} alt="LinkedIn FROMM Chile" />
+              <img
+                src="/icons/Navbar/linkedin.svg"
+                width={30}
+                height={30}
+                alt="LinkedIn FROMM Chile"
+              />
             </a>
           </div>
           <div className="hidden lg:block self-start ml-8 mb-6 relative">
@@ -196,11 +230,23 @@ export const Layout = () => {
             </div>
             <div className="border-[1px] border-red px-6 py-2 mt-8 rounded-lg m-auto max-w-[90%]">
               <div className="flex items-center justify-start gap-4 mb-2">
-                <img src="/icons/Layout/phone.svg" height={30} width={30} alt="" aria-hidden="true" />
+                <img
+                  src="/icons/Layout/phone.svg"
+                  height={30}
+                  width={30}
+                  alt=""
+                  aria-hidden="true"
+                />
                 <p className="text-textGray font-light">+56 2 2571 1100</p>
               </div>
               <div className="flex items-center justify-start gap-4">
-                <img src="/icons/Layout/mail.svg" height={30} width={30} alt="" aria-hidden="true" />
+                <img
+                  src="/icons/Layout/mail.svg"
+                  height={30}
+                  width={30}
+                  alt=""
+                  aria-hidden="true"
+                />
                 <a
                   href="mailto:contacto@fromm-pack.cl"
                   onClick={() => setIsOpen(false)}
@@ -210,7 +256,13 @@ export const Layout = () => {
                 </a>
               </div>
               <div className="flex items-center justify-start gap-4 ml-[-9px]">
-                <img src="/icons/money.svg" alt="" aria-hidden="true" width={40} height={40} />
+                <img
+                  src="/icons/money.svg"
+                  alt=""
+                  aria-hidden="true"
+                  width={40}
+                  height={40}
+                />
                 <Link
                   to="/cotizacion"
                   className="ml-[-10px]"
