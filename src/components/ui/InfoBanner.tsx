@@ -33,7 +33,8 @@ export const InfoBanner = ({
             autoPlay
             loop
             muted
-            className="md:h-[500px] md:w-full md:object-cover"
+            playsInline
+            className="w-full aspect-[16/7] object-cover"
           >
             <source src={srcImg} type="video/mp4" />
           </video>
@@ -42,7 +43,7 @@ export const InfoBanner = ({
             src={srcImg}
             alt={alt}
             loading="lazy"
-            className="md:h-[500px] h-[220px] w-full object-cover"
+            className="w-full aspect-[4/3] md:aspect-[16/7] object-cover"
           />
         )}
         <div className="p-6 text-white bg-red flex flex-col gap-2 md:gap-4 md:w-[38%] md:absolute md:bottom-[-16px] md:left-10 md:mix-blend-hard-light md:z-50 md:rounded-xl">

@@ -60,10 +60,11 @@ export const Home = () => {
       <section>
         {swiperData.length > 0 ? (
           <div className="relative">
+            {/* Mobile: aspect-ratio para no cortar */}
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
               alt="Planta de embalaje industrial FROMM Chile"
-              className="w-full object-cover lg:hidden"
+              className="w-full aspect-[4/3] object-cover lg:hidden"
             />
             <Swiper
               modules={[Autoplay]}
@@ -72,6 +73,7 @@ export const Home = () => {
               autoplay={{ delay: 5000, disableOnInteraction: false }}
               scrollbar={{ draggable: true }}
               speed={600}
+              className="hidden lg:block"
             >
               {swiperData.map((item) => (
                 <SwiperSlide key={item.id}>
@@ -79,7 +81,7 @@ export const Home = () => {
                     <img
                       src={item.url}
                       alt={item.name}
-                      className="w-full h-[420px] object-cover lg:block hidden"
+                      className="w-full aspect-[16/6] object-cover"
                     />
                   </Link>
                 </SwiperSlide>
@@ -91,11 +93,11 @@ export const Home = () => {
             <img
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/frommMob.JPG"
               alt="Planta de embalaje industrial FROMM Chile"
-              className="w-full object-cover lg:hidden"
+              className="w-full aspect-[4/3] object-cover lg:hidden"
             />
             <video
               src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/fromm-chile.mp4"
-              className="hidden lg:block w-full h-[480px] object-cover"
+              className="hidden lg:block w-full aspect-[16/6] object-cover"
               autoPlay
               loop
               muted
@@ -147,7 +149,7 @@ export const Home = () => {
                 loading="lazy"
               />
             </div>
-            <div className="flex flex-col gap-6 justify-center items-center lg:flex-col-reverse lg:w-[50%] mt-8 lg:mt-0">
+            <div className="prose-content flex flex-col gap-6 justify-center items-center lg:flex-col-reverse lg:w-[50%] mt-8 lg:mt-0">
               <img
                 className="rounded-lg shadow-soft w-full object-cover lg:h-40"
                 src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/equipoFromm.webp"
@@ -200,7 +202,7 @@ export const Home = () => {
         </FadeInSection>
         <FadeInSection delay={0.05}>
         <section className="mb-20 py-14">
-          <div className="max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%]">
+          <div className="prose-content max-w-[75%] m-auto flex flex-col gap-5 lg:max-w-[60%]">
             <h2 className="text-textGray font-semibold text-2xl text-left leading-snug">
               Especialistas en soluciones de embalaje
             </h2>

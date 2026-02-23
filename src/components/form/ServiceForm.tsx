@@ -72,94 +72,97 @@ export const ServiceForm = ({ titulo, descripcion }: ServiceFormProps) => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="mb-20 pt-12 px-0 pb-5">
-          <div className="bg-primaryGray p-5 md:px-20 md:py-5 md:max-w-[1350px] md:m-auto md:flex md:flex-row-reverse md:justify-between md:items-center">
-            <div className="md:grid md:grid-cols-1 md:gap-0 my-10 mb-14 md:w-[80%]">
-              <div>
-                <h2 className="text-left text-textGray mb-3 text-3xl md:text-4xl font-bold uppercase mt-5">
+        <div className="mb-20 pb-5">
+          <div className="md:max-w-[1200px] md:mx-auto md:rounded-2xl overflow-hidden shadow-card">
+            <div className="md:flex md:flex-row-reverse">
+
+              {/* Panel formulario */}
+              <div className="flex-1 p-6 md:p-12 bg-white">
+                <h2 className="text-textGray mb-2 text-2xl md:text-3xl font-semibold">
                   {titulo}
                 </h2>
-                <p className="text-left font-xl text-textGray font-light mb-5">
+                <p className="text-sm text-textGray font-light mb-8 leading-relaxed">
                   {descripcion}
                 </p>
+                <div className="md:grid md:grid-cols-2 md:gap-x-5">
+                  <InputController
+                    control={control}
+                    name="name"
+                    placeholder="Nombre*"
+                    error={errors.name?.message}
+                  />
+                  <InputController
+                    control={control}
+                    name="email"
+                    placeholder="Correo electrónico*"
+                    error={errors.email?.message}
+                    type="email"
+                  />
+                  <InputController
+                    control={control}
+                    name="phone"
+                    placeholder="Teléfono"
+                    type="tel"
+                  />
+                  <InputController
+                    control={control}
+                    name="company"
+                    placeholder="Empresa*"
+                    error={errors.company?.message}
+                  />
+                  <div className="md:col-span-2">
+                    <InputController
+                      control={control}
+                      name="equipment"
+                      placeholder="Tipo de máquina o equipo*"
+                      error={errors.equipment?.message}
+                    />
+                  </div>
+                </div>
+                <TextareaController
+                  control={control}
+                  name="message"
+                  placeholder="Descripción del servicio requerido*"
+                  error={errors.message?.message}
+                  rows={5}
+                />
+                <div className="mt-2">
+                  <Button link="" onClick={handleSubmit(onSubmit)}>
+                    Solicitar servicio
+                  </Button>
+                </div>
               </div>
-              <InputController
-                control={control}
-                name="name"
-                placeholder="Nombre*"
-                error={errors.name?.message}
-              />
-              <InputController
-                control={control}
-                name="email"
-                placeholder="Correo*"
-                error={errors.email?.message}
-              />
-              <InputController
-                control={control}
-                name="phone"
-                placeholder="Teléfono"
-              />
-              <InputController
-                control={control}
-                name="equipment"
-                placeholder="Tipo de Máquina*"
-                error={errors.equipment?.message}
-              />
-              <InputController
-                control={control}
-                name="company"
-                placeholder="Empresa*"
-                error={errors.company?.message}
-              />
-              <TextareaController
-                control={control}
-                name="message"
-                placeholder="Mensaje*"
-                error={errors.message?.message}
-              />
-              <div className="flex justify-center">
-                <Button
-                  className="border border-black text-textGray font-bold uppercase"
-                  link=""
-                  whiteButton
-                  onClick={handleSubmit(onSubmit)}
-                >
-                  ENVIAR
-                </Button>
+
+              {/* Panel info */}
+              <div className="md:w-[300px] bg-primaryGray p-8 md:p-10 flex flex-col gap-6 justify-center">
+                <img
+                  src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/servicio.png"
+                  alt="Servicio técnico FROMM"
+                  loading="lazy"
+                  className="w-32 h-32 mx-auto object-contain"
+                />
+                <div className="flex flex-col gap-4">
+                  <a href="tel:+5622571138" className="flex items-center gap-3 text-textGray hover:text-red group">
+                    <span className="w-9 h-9 rounded-lg bg-white shadow-soft flex items-center justify-center shrink-0 group-hover:bg-red group-hover:text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width={17} height={17} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2l0 4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></svg>
+                    </span>
+                    <span className="text-sm font-light leading-snug">+56 2 257 111 38<br/>+56 2 257 111 26</span>
+                  </a>
+                  <a href="mailto:contacto@fromm-pack.cl" className="flex items-center gap-3 text-textGray hover:text-red group">
+                    <span className="w-9 h-9 rounded-lg bg-white shadow-soft flex items-center justify-center shrink-0 group-hover:bg-red group-hover:text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width={17} height={17} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                    </span>
+                    <span className="text-sm font-light">contacto@fromm-pack.cl</span>
+                  </a>
+                  <a href="https://api.whatsapp.com/send?phone=56932590343" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-textGray hover:text-red group">
+                    <span className="w-9 h-9 rounded-lg bg-white shadow-soft flex items-center justify-center shrink-0 group-hover:bg-red group-hover:text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" width={17} height={17} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></svg>
+                    </span>
+                    <span className="text-sm font-light">WhatsApp Servicio</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="px-6 py-2 mt-8 rounded-lg max-w-[90%] md:w-[50%]">
-              <div className="w-[200px] h-[200px] m-auto md:w-[300px] md:h-[300px] md:mb-10">
-                <img src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/servicio.png" alt="Servicio técnico FROMM" loading="lazy" />
-              </div>
-              <div className="flex items-center justify-start gap-4 mb-2">
-                <img src="/icons/Layout/phone.svg" height={30} width={30} alt="" aria-hidden="true" />
-                <p className="text-textGray font-light">
-                  +56 2 257 111 38 / +56 2 257 111 26
-                </p>
-              </div>
-              <div className="flex items-center justify-start gap-4 mb-2">
-                <img src="/icons/Layout/mail.svg" height={30} width={30} alt="" aria-hidden="true" />
-                <a
-                  href="mailto:contacto@fromm-pack.cl"
-                  className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear"
-                >
-                  contacto@fromm-pack.cl
-                </a>
-              </div>
-              <div className="flex items-center justify-start gap-4 mb-2">
-                <img src="/icons/instantmessage.svg" height={30} width={30} alt="" aria-hidden="true" />
-                <a
-                  href="https://api.whatsapp.com/send?phone=56932590343"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <p className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear">
-                    Nuestro Whatsapp
-                  </p>
-                </a>
-              </div>
+
             </div>
           </div>
         </div>
