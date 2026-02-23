@@ -2,15 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Base ─────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Transición global suave para propiedades visuales */
+*, *::before, *::after {
+  transition-property: color, background-color, border-color, box-shadow, opacity, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Tipografía ────────────────────────────────────────────── */
 p {
-    @apply text-justify;
-  }
+  @apply leading-relaxed;
+}
 
-  p {
-    @apply text-justify;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
 
-  /* Chrome, Safari, Edge, Opera */
+/* ─── Accesibilidad ─────────────────────────────────────────── */
+/* Skip link: visible solo al recibir foco con teclado */
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background-color: #f10503;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+/* Focus visible consistente para navegación con teclado */
+:focus-visible {
+  outline: 2px solid #f10503;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ─── Formularios ───────────────────────────────────────────── */
+/* Chrome, Safari, Edge, Opera */
 .no-arrows::-webkit-outer-spin-button,
 .no-arrows::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -20,4 +75,20 @@ p {
 /* Firefox */
 .no-arrows[type=number] {
   -moz-appearance: textfield;
+}
+
+/* ─── Utilidades ────────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

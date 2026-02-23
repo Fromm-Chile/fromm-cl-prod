@@ -33,7 +33,7 @@ export const InfoBanner = ({
             autoPlay
             loop
             muted
-            className="md:h-[520px] md:w-full md:object-cover"
+            className="md:h-[500px] md:w-full md:object-cover"
           >
             <source src={srcImg} type="video/mp4" />
           </video>
@@ -42,17 +42,17 @@ export const InfoBanner = ({
             src={srcImg}
             alt={alt}
             loading="lazy"
-            className="md:h-[520px] h-[200px] w-full md:w-full md:object-cover"
+            className="md:h-[500px] h-[220px] w-full object-cover"
           />
         )}
-        <div className="parent p-6 text-white bg-red flex flex-col gap-1 md:gap-5 md:w-[40%] md:absolute md:bottom-[-20px] md:left-[40px] md:mix-blend-hard-light md:z-50 md:rounded-lg">
-          <p className="child font-extralight tracking-widest md:mt-5 md:text-2xl text-left">
+        <div className="p-6 text-white bg-red flex flex-col gap-2 md:gap-4 md:w-[38%] md:absolute md:bottom-[-16px] md:left-10 md:mix-blend-hard-light md:z-50 md:rounded-xl">
+          <p className="font-light tracking-widest text-sm md:text-base text-left uppercase">
             {category}
           </p>
-          <h1 className="child font-bold text-2xl md:text-3xl text-left">
+          <h1 className="font-bold text-2xl md:text-3xl text-left leading-tight">
             {title}
           </h1>
-          <p className="child font-extralight md:text-lg">{desc}</p>
+          <p className="font-light text-sm md:text-base leading-relaxed">{desc}</p>
           {sinBoton ? null : (
             <Button link={link} whiteButton onClick={onClick}>
               {buttonTitle}

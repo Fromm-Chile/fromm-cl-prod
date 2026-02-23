@@ -5,6 +5,7 @@ import { useState } from "react";
 import { navbarData } from "../../Data/NavData";
 import { useProductStore } from "../../store/useStore";
 import { footerNavData } from "../../Data/layoutData";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Layout = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,145 +13,116 @@ export const Layout = () => {
 
   return (
     <>
-      <div className="fixed lg:bottom-0 lg:right-0 bottom-24 right-1 z-[1000] m-5 cursor-pointer">
-        <a
-          href="https://api.whatsapp.com/send?phone=56923861404"
-          target="_blank"
-          rel="noreferrer"
-        >
+      {/* WhatsApp flotante */}
+      <a
+        href="https://api.whatsapp.com/send?phone=56923861404"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Contactar por WhatsApp"
+        className="fixed lg:bottom-6 lg:right-6 bottom-24 right-3 z-[1000] group"
+      >
+        <div className="relative">
           <img
             src="/icons/whatsapp.svg"
-            alt="Contactar por WhatsApp"
-            className="lg:w-20 lg:h-20 w-16 h-16 hover:border-2 hover:border-red hover:shadow-2xl hover:rounded-xl transition-all duration-300 ease-in-out"
-            width={80}
-            height={80}
+            alt=""
+            aria-hidden="true"
+            className="lg:w-16 lg:h-16 w-14 h-14 drop-shadow-lg group-hover:scale-110 transition-transform duration-200"
+            width={64}
+            height={64}
           />
-        </a>
-      </div>
+          <span className="absolute -top-9 left-1/2 -translate-x-1/2 bg-shadowBlack text-white text-xs px-2 py-1 rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none hidden lg:block">
+            WhatsApp
+          </span>
+        </div>
+      </a>
+
       <Navbar />
       <Outlet />
-      <footer className="bg-primaryGray h-auto flex flex-col items-center pt-16 pb-9 md:px-32 w-full relative">
+
+      <footer className="bg-primaryGray flex flex-col items-center pt-14 pb-8 w-full relative">
+        {/* SGS cert */}
         <img
           src="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/sgs.png"
           alt="Certificación SGS de calidad FROMM Chile"
-          className="rounded-lg lg:w-[220px] lg:h-[140px] w-[180px] h-[110px] lg:rounded-xl absolute lg:top-[18px] lg:right-[285px] bottom-[213px] right-[30px]"
-          width={220}
-          height={140}
+          className="rounded-xl lg:w-[200px] lg:h-[128px] w-[160px] h-[100px] absolute lg:top-5 lg:right-72 bottom-[200px] right-6"
+          width={200}
+          height={128}
           loading="lazy"
         />
-        <Link className="mb-14" to="/">
+
+        {/* Logo */}
+        <Link className="mb-12" to="/" aria-label="FROMM Chile - Inicio">
           <img
-            className="max-w-[310px]"
+            className="max-w-[280px]"
             src="/img/Navbar/FrommLogo.webp"
-            alt="fromm-chile"
-            width={310}
-            height={53}
+            alt="FROMM Chile"
+            width={280}
+            height={48}
             loading="lazy"
           />
         </Link>
-        <div className="lg:flex w-full justify-between">
-          <div className="self-start ml-8 mb-6">
-            <h2 className="font-bold text-2xl mb-8">FROMM CHILE</h2>
-            <p className="text-textGray font-light mb-4 text-left">
-              Dirección: Avenida Aeropuerto #560 <br />
-              Quilicura. Santiago de Chile.
-            </p>
-            <p className="text-textGray font-light mb-4 text-left">
-              E-mail: contacto@fromm-pack.cl <br />
-              Teléfono: +56 2 2571 1100
-            </p>
+
+        <div className="lg:flex w-full justify-between px-8 lg:px-16">
+          {/* Contacto */}
+          <div className="self-start mb-8">
+            <h2 className="font-semibold text-xl mb-6 tracking-wide">FROMM CHILE</h2>
+            <address className="not-italic flex flex-col gap-3 text-sm text-textGray font-light">
+              <p className="text-left">
+                Avenida Aeropuerto #560,<br />
+                Quilicura, Santiago de Chile.
+              </p>
+              <a href="mailto:contacto@fromm-pack.cl" className="hover:text-red">
+                contacto@fromm-pack.cl
+              </a>
+              <a href="tel:+56225711100" className="hover:text-red">
+                +56 2 2571 1100
+              </a>
+            </address>
           </div>
-          <ul className="lg:hidden self-start ml-8 mb-2 text-red font-medium">
-            <li className="mb-2 hover:font-bold cursor-pointer">
-              <Link className="flex items-center" to="/soluciones">
-                <p>Soluciones</p>
-                <img
-                  src="/icons/chevronRightSmall.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width={16}
-                  height={16}
-                />
-              </Link>
-            </li>
-            <li className="mb-2 hover:font-bold cursor-pointer">
-              <Link className="flex items-center" to="/mercados">
-                <p>Mercados</p>
-                <img
-                  src="/icons/chevronRightSmall.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width={16}
-                  height={16}
-                />
-              </Link>
-            </li>
-            <li className="mb-2 hover:font-bold cursor-pointer">
-              <Link className="flex items-center" to="/nosotros">
-                <p>Acerca de Fromm</p>
-                <img
-                  src="/icons/chevronRightSmall.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width={16}
-                  height={16}
-                />
-              </Link>
-            </li>
-            <li className="mb-2 hover:font-bold cursor-pointer">
-              <Link className="flex items-center" to="/productos">
-                <p>Productos</p>
-                <img
-                  src="/icons/chevronRightSmall.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width={16}
-                  height={16}
-                />
-              </Link>
-            </li>
+
+          {/* Links mobile */}
+          <ul className="lg:hidden self-start mb-4 text-red font-medium text-sm flex flex-col gap-3">
+            {[
+              { to: "/soluciones", label: "Soluciones" },
+              { to: "/mercados", label: "Mercados" },
+              { to: "/nosotros", label: "Acerca de Fromm" },
+              { to: "/productos", label: "Productos" },
+            ].map(({ to, label }) => (
+              <li key={to}>
+                <Link className="flex items-center gap-1 hover:underline" to={to}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width={13} height={13} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
-          <div className="lg:hidden flex items-center justify-start gap-4 mt-2 mb-5 ml-8">
-            <a
-              href="https://www.instagram.com/frommchile?igsh=ZjcwYjFpZ2E5MWE0"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/icons/Navbar/instagram.svg"
-                width={30}
-                height={30}
-                alt="Instagram FROMM Chile"
-              />
+
+          {/* RRSS mobile */}
+          <div className="lg:hidden flex items-center gap-4 mb-6">
+            <a href="https://www.instagram.com/frommchile?igsh=ZjcwYjFpZ2E5MWE0" target="_blank" rel="noreferrer" aria-label="Instagram FROMM Chile" className="hover:opacity-75">
+              <img src="/icons/Navbar/instagram.svg" width={28} height={28} alt="Instagram" />
             </a>
-            <a
-              href="https://www.linkedin.com/company/fromm-chile-s-a/posts/?feedView=all&viewAsMember=true"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src="/icons/Navbar/linkedin.svg"
-                width={30}
-                height={30}
-                alt="LinkedIn FROMM Chile"
-              />
+            <a href="https://www.linkedin.com/company/fromm-chile-s-a/posts/?feedView=all&viewAsMember=true" target="_blank" rel="noreferrer" aria-label="LinkedIn FROMM Chile" className="hover:opacity-75">
+              <img src="/icons/Navbar/linkedin.svg" width={28} height={28} alt="LinkedIn" />
             </a>
           </div>
-          <div className="hidden lg:block self-start ml-8 mb-6 relative">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+          {/* Links desktop */}
+          <nav aria-label="Navegación del footer" className="hidden lg:block self-start mb-6 relative">
+            <div className="grid grid-cols-4 gap-10">
               {footerNavData.map((section) => (
-                <div key={section.id} className="text-textGray w-[200px]">
-                  <h3 className="text-lg font-bold mb-4 text-red">
+                <div key={section.id} className="text-textGray w-[180px]">
+                  <h3 className="text-sm font-semibold mb-4 text-red tracking-wide">
                     {section.name}
                   </h3>
-                  <ul className="flex flex-col gap-3">
+                  <ul className="flex flex-col gap-2.5">
                     {section.subSeccion.map((submenu) => (
                       <li key={submenu.id}>
                         <Link
                           to={submenu.link}
-                          className="text-textGray hover:text-red transition duration-300"
+                          className="text-sm text-textGray hover:text-red"
                         >
-                          <p className="text-left">{submenu.name}</p>
+                          {submenu.name}
                         </Link>
                       </li>
                     ))}
@@ -158,153 +130,124 @@ export const Layout = () => {
                 </div>
               ))}
             </div>
-            <div className="flex items-center flex-col justify-start gap-1 mt-8 absolute bottom-0 right-10">
-              <div className="flex items-center gap-4 border hover:border-2 transition-hover duration-150 border-red rounded-full p-2 w-[170px]">
-                <a
-                  href="https://www.instagram.com/frommchile?igsh=ZjcwYjFpZ2E5MWE0"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3"
-                >
-                  <img
-                    src="/icons/Navbar/instagram.svg"
-                    width={40}
-                    height={40}
-                  />
-                  <p>Instagram</p>
-                </a>
-              </div>
-              <div className="flex items-center gap-4 border hover:border-2 transition-hover duration-150 border-red rounded-full p-2 pl-5 w-[170px]">
-                <a
-                  href="https://www.linkedin.com/company/fromm-chile-s-a/posts/?feedView=all&viewAsMember=true"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3"
-                >
-                  <img
-                    src="/icons/Navbar/linkedin.svg"
-                    width={40}
-                    height={40}
-                  />
-                  <p>LinkedIn</p>
-                </a>
-              </div>
+
+            {/* RRSS desktop */}
+            <div className="flex gap-3 mt-8 absolute bottom-0 right-8">
+              <a
+                href="https://www.instagram.com/frommchile?igsh=ZjcwYjFpZ2E5MWE0"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram FROMM Chile"
+                className="flex items-center gap-2 border border-red/40 rounded-full px-4 py-1.5 text-sm text-textGray hover:bg-red hover:text-white hover:border-red"
+              >
+                <img src="/icons/Navbar/instagram.svg" width={16} height={16} alt="" aria-hidden="true" />
+                Instagram
+              </a>
+              <a
+                href="https://www.linkedin.com/company/fromm-chile-s-a/posts/?feedView=all&viewAsMember=true"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn FROMM Chile"
+                className="flex items-center gap-2 border border-red/40 rounded-full px-4 py-1.5 text-sm text-textGray hover:bg-red hover:text-white hover:border-red"
+              >
+                <img src="/icons/Navbar/linkedin.svg" width={16} height={16} alt="" aria-hidden="true" />
+                LinkedIn
+              </a>
             </div>
-          </div>
+          </nav>
         </div>
-        <div className="border-t-[1px] border-black mb-24 mx-8 lg:w-[95%] lg:text-center w-[90%] lg:mb-0">
-          <p className="text-textGray font-light mt-4">
-            © 2026 Fromm Chile. Todos los derechos reservados.
+
+        {/* Copyright */}
+        <div className="border-t border-black/10 mt-4 mb-24 mx-8 lg:w-[95%] lg:mb-0 w-[90%]">
+          <p className="text-textGray text-sm font-light mt-4 lg:text-center">
+            © {new Date().getFullYear()} FROMM Chile. Todos los derechos reservados.
           </p>
         </div>
-        <div
-          className={`lg:hidden w-full bg-white shadow-lg fixed bottom-0 z-50 flex p-5 items-end transition-all duration-1000 ease-in-out ${
-            isOpen ? "h-[100%] flex-col justify-between" : "h-[6rem]"
-          }`}
+
+        {/* Mobile bottom bar */}
+        <motion.div
+          initial={false}
+          animate={{ height: isOpen ? "100%" : "5.5rem" }}
+          transition={{ duration: 0.32, ease: [0.4, 0, 0.2, 1] }}
+          className="lg:hidden w-full bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.08)] fixed bottom-0 z-50 flex flex-col justify-between overflow-hidden"
+          id="mobile-menu"
         >
-          <div className={`w-full ${isOpen ? "block" : "hidden"}`}>
-            <div>
-              <img
-                className="max-w-[250px] m-auto mt-6 mb-10"
-                src="/img/Navbar/FrommLogo.webp"
-                alt="fromm-chile"
-                width={250}
-                height={43}
-              />
-              <div className="m-auto w-full flex justify-center items-center">
-                <ul className=" text-xl font-light text-textGray flex flex-col gap-4 items-start w-full">
-                  {navbarData.map((item) => (
-                    <Link
-                      to={item.link}
-                      key={item.id}
-                      className="m-auto"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <li className="cursor-pointer hover:text-red transition-colors duration-500 ease-linear">
-                        {item.name}
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div className="border-[1px] border-red px-6 py-2 mt-8 rounded-lg m-auto max-w-[90%]">
-              <div className="flex items-center justify-start gap-4 mb-2">
-                <img
-                  src="/icons/Layout/phone.svg"
-                  height={30}
-                  width={30}
-                  alt=""
-                  aria-hidden="true"
-                />
-                <p className="text-textGray font-light">+56 2 2571 1100</p>
-              </div>
-              <div className="flex items-center justify-start gap-4">
-                <img
-                  src="/icons/Layout/mail.svg"
-                  height={30}
-                  width={30}
-                  alt=""
-                  aria-hidden="true"
-                />
-                <a
-                  href="mailto:contacto@fromm-pack.cl"
-                  onClick={() => setIsOpen(false)}
-                  className="text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear"
-                >
-                  contacto@fromm-pack.cl
-                </a>
-              </div>
-              <div className="flex items-center justify-start gap-4 ml-[-9px]">
-                <img
-                  src="/icons/money.svg"
-                  alt=""
-                  aria-hidden="true"
-                  width={40}
-                  height={40}
-                />
-                <Link
-                  to="/cotizacion"
-                  className="ml-[-10px]"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <p
-                    className={`${
-                      products.length > 0
-                        ? "font-bold hover:underline"
-                        : "text-textGray font-light hover:underline hover:font-bold transition-hover duration-300 ease-linear"
-                    }`}
-                  >
-                    Cotización
-                  </p>
-                </Link>
-                {products.length > 0 && (
-                  <div className="border border-red rounded-full w-16 h-8 flex items-center justify-center bg-white">
-                    <p className="text-red font-bold text-lg">
-                      {products.length}
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-          <div className="absolute bottom-3 right-0 flex justify-between w-full px-5 lg:hidden">
-            <div
-              className="h-14 w-14 border-[1px] border-red p-2 cursor-pointer"
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.18, delay: 0.1 }}
+                className="flex flex-col justify-between h-full pb-24 pt-6 px-5"
+              >
+                <div>
+                  <img
+                    className="max-w-[200px] mx-auto mb-8"
+                    src="/img/Navbar/FrommLogo.webp"
+                    alt="FROMM Chile"
+                    width={200}
+                    height={34}
+                  />
+                  <ul className="flex flex-col">
+                    {navbarData.map((item) => (
+                      <Link
+                        to={item.link}
+                        key={item.id}
+                        onClick={() => setIsOpen(false)}
+                        className="block"
+                      >
+                        <li className="text-base font-light text-textGray hover:text-red py-3 border-b border-primaryGray last:border-0">
+                          {item.name}
+                        </li>
+                      </Link>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="border border-red/30 rounded-xl px-5 py-4 mt-6 flex flex-col gap-3">
+                  <a href="tel:+56225711100" className="flex items-center gap-3 text-textGray hover:text-red">
+                    <svg xmlns="http://www.w3.org/2000/svg" width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2l0 4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></svg>
+                    <span className="text-sm font-light">+56 2 2571 1100</span>
+                  </a>
+                  <a href="mailto:contacto@fromm-pack.cl" onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-textGray hover:text-red">
+                    <svg xmlns="http://www.w3.org/2000/svg" width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+                    <span className="text-sm font-light">contacto@fromm-pack.cl</span>
+                  </a>
+                  <Link to="/cotizacion" onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-textGray hover:text-red">
+                    <svg xmlns="http://www.w3.org/2000/svg" width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
+                    <span className={`text-sm ${products.length > 0 ? "font-semibold text-red" : "font-light"}`}>
+                      Cotización
+                    </span>
+                    {products.length > 0 && (
+                      <span className="bg-red text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                        {products.length}
+                      </span>
+                    )}
+                  </Link>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Bottom bar actions */}
+          <div className="absolute bottom-3 left-0 right-0 flex justify-between items-center px-5">
+            <button
               onClick={() => setIsOpen(!isOpen)}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+              className="h-12 w-12 rounded-lg border border-red flex items-center justify-center hover:bg-red-50"
             >
-              <img
-                src={isOpen ? "/icons/closeMob.svg" : "/icons/menuMob.svg"}
-                alt={isOpen ? "Cerrar menú" : "Abrir menú"}
-                width={40}
-                height={40}
-              />
-            </div>
-            <div>
-              <Button link="/contacto">CONTACTO</Button>
-            </div>
+              {isOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="#f10503" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="#f10503" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+              )}
+            </button>
+            <Button link="/contacto">CONTACTO</Button>
           </div>
-        </div>
+        </motion.div>
       </footer>
     </>
   );

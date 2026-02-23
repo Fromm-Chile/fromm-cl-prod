@@ -128,8 +128,9 @@ export const Products = () => {
         <Loader />
       ) : (
         <>
-          <title>Productos</title>
-          <meta name="description" content="información sobre los productos" />
+          <title>Productos de Embalaje Industrial | FROMM Chile</title>
+          <meta name="description" content="Catálogo de productos de embalaje industrial FROMM Chile: zunchos de acero y poliéster, máquinas envolvedoras, airpads, film de embalaje y herramientas de flejado." />
+          <link rel="canonical" href="https://fromm-pack.cl/productos" />
           <InfoBanner
             category="SIEMPRE UNA SOLUCIÓN"
             srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/products.webp"
@@ -172,17 +173,18 @@ export const Products = () => {
               ) : (
                 <div className="w-full md:w-[1014px] mx-auto">
                   {products?.length === 0 ? (
-                    <div className="pt-16 p-5 md:w-[914px] w-full mx-auto mb-20 mt-20 flex flex-col justify-center items-center">
+                    <div className="p-5 w-full mx-auto mb-20 mt-20 flex flex-col justify-center items-center gap-4">
                       <img
                         src="icons/noresults.svg"
-                        alt="sin-resultados"
-                        className="h-60 w-60"
+                        alt="Sin resultados"
+                        className="h-40 w-40 opacity-60"
                       />
-                      <p className="text-4xl font-medium">Sin resultados!!</p>
+                      <p className="text-xl font-semibold text-textGray">Sin resultados</p>
+                      <p className="text-sm text-textGray font-light">Intenta con otro término o categoría</p>
                     </div>
                   ) : (
                     <>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-5 p-5 max-w-[1250px] md:mx-auto md:mt-28 md:w-[100%]">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 p-5 max-w-[1250px] md:mx-auto md:mt-20 md:w-[100%]">
                         {(!products ? products ?? [] : products).map(
                           (product) => (
                             <ProductCard
@@ -197,43 +199,37 @@ export const Products = () => {
                         )}
                       </div>
                       {totalPages > 1 && (
-                        <div className="flex justify-center gap-5 items-center mb-20 bg-white border border-red w-fit m-auto rounded-md">
+                        <div className="flex justify-center items-center gap-1 mb-20 w-fit m-auto rounded-lg overflow-hidden border border-red/30 shadow-soft">
                           <button
                             onClick={() =>
                               navigate(
                                 typeof category === "number"
-                                  ? `?categoryId=${category}&page=${
-                                      page === 0 ? 0 : page - 1
-                                    }`
+                                  ? `?categoryId=${category}&page=${page === 0 ? 0 : page - 1}`
                                   : `?page=${page === 0 ? 0 : page - 1}`
                               )
                             }
-                            className="p-3 hover:text-white hover:bg-gray-500 border-r border-red"
+                            className="px-4 py-2.5 text-sm font-medium hover:bg-red hover:text-white border-r border-red/30 disabled:opacity-40"
+                            disabled={page <= 1}
+                            aria-label="Página anterior"
                           >
-                            Previo
+                            ← Anterior
                           </button>
-                          <p>
-                            {page} de {totalPages}
-                          </p>
+                          <span className="px-4 py-2.5 text-sm text-textGray">
+                            {page} / {totalPages}
+                          </span>
                           <button
                             onClick={() =>
                               navigate(
                                 typeof category === "number"
-                                  ? `?categoryId=${category}&page=${
-                                      page === totalPages
-                                        ? totalPages
-                                        : page + 1
-                                    }`
-                                  : `?page=${
-                                      page === totalPages
-                                        ? totalPages
-                                        : page + 1
-                                    }`
+                                  ? `?categoryId=${category}&page=${page === totalPages ? totalPages : page + 1}`
+                                  : `?page=${page === totalPages ? totalPages : page + 1}`
                               )
                             }
-                            className="p-3 hover:text-white hover:bg-gray-500 border-l border-red"
+                            className="px-4 py-2.5 text-sm font-medium hover:bg-red hover:text-white border-l border-red/30 disabled:opacity-40"
+                            disabled={page >= totalPages}
+                            aria-label="Página siguiente"
                           >
-                            Siguiente
+                            Siguiente →
                           </button>
                         </div>
                       )}

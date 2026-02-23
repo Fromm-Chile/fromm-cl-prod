@@ -1,82 +1,127 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "./Button";
 import { FloatingNav } from "./floating-navbar";
 import { navbarData } from "../../Data/NavData";
 import { useProductStore } from "../../store/useStore";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export const Navbar = () => {
   const products = useProductStore((state) => state.products);
+  const location = useLocation();
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
 
   return (
     <>
-      <div className="hidden lg:flex bg-primaryGray h-[45px] lg:items-center lg:justify-end lg:pr-16 text-textGray gap-16">
-        <Link to="/" className="flex gap-1 cursor-pointer hover:underline">
-          <img src="/icons/phoneGray.svg" height={23} width={23} alt="" aria-hidden="true" />
-          <p>+56 2 2571 1100</p>
-        </Link>
-        <div className="cursor-pointer hover:underline">
-          <a href="mailto:contacto@fromm-pack.cl">contacto@fromm-pack.cl</a>
-        </div>
-        <div className="flex gap-3 items-center relative">
-          <Link
-            to="/cotizacion"
-            className="cursor-pointer flex gap-3 items-center hover:underline"
-          >
-            <p className={`${products.length > 0 ? "font-bold" : ""}`}>
-              Cotización
-            </p>
-          </Link>
+      {/* Top bar */}
+      <div className="hidden lg:flex bg-primaryGray h-[42px] items-center justify-end pr-16 text-textGray text-sm gap-8">
+        <a
+          href="tel:+56225711100"
+          className="flex items-center gap-1.5 hover:text-red"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2l0 4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/></svg>
+          <span>+56 2 2571 1100</span>
+        </a>
+        <span className="text-primaryGray select-none">|</span>
+        <a
+          href="mailto:contacto@fromm-pack.cl"
+          className="flex items-center gap-1.5 hover:text-red"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+          <span>contacto@fromm-pack.cl</span>
+        </a>
+        <span className="text-primaryGray select-none">|</span>
+        <Link
+          to="/cotizacion"
+          className="flex items-center gap-1.5 hover:text-red relative"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width={15} height={15} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
+          <span className={products.length > 0 ? "font-semibold text-red" : ""}>
+            Cotización
+          </span>
           {products.length > 0 && (
-            <div className="border border-red rounded-full w-16 h-8 flex items-center justify-center bg-white absolute top-6 right-1">
-              <p className="text-red font-bold text-lg">{products.length}</p>
-            </div>
+            <span className="ml-1 bg-red text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+              {products.length}
+            </span>
           )}
-        </div>
+        </Link>
       </div>
+
       <FloatingNav />
-      <div className="flex h-[90px] justify-center items-center bg-white lg:px-3 xl:px-8 lg:h-[130px] lg:justify-between">
-        <Link to="/">
+
+      {/* Main navbar */}
+      <header className="flex h-[90px] justify-center items-center bg-white lg:px-6 xl:px-10 lg:h-[120px] lg:justify-between shadow-soft">
+        <Link to="/" aria-label="FROMM Chile - Inicio">
           <img
-            className="max-w-[250px] xl:max-w-[350px]"
+            className="max-w-[220px] xl:max-w-[300px]"
             src="/img/Navbar/FrommLogo.webp"
-            alt="fromm-chile"
-            width={350}
-            height={60}
+            alt="FROMM Chile"
+            width={300}
+            height={52}
           />
         </Link>
-        <div className="hidden lg:flex justify-between items-center">
-          <ul className="text-base font-medium text-textGray flex items-start lg:gap-3 xl:gap-10">
-            <>
-              {navbarData.map((item, index) => (
-                <div className="relative group z-[1000]" key={index}>
-                  <Link to={item.link}>
-                    <li className="cursor-pointer hover:font-bold transition- duration-300 ease-linear">
-                      {item.name}
-                    </li>
+        <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-2">
+          <ul className="text-sm font-medium text-textGray flex items-center gap-1 xl:gap-2">
+            {navbarData.map((item) => {
+              const isActive = location.pathname === item.link ||
+                (item.submenu?.some(s => location.pathname === s.link));
+              return (
+                <li
+                  key={item.id}
+                  className="relative"
+                  onMouseEnter={() => item.hasDropdown ? setOpenDropdown(item.id) : null}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <Link
+                    to={item.link}
+                    className={`relative px-3 py-2 rounded-md flex items-center gap-0.5 hover:text-red group ${isActive ? "text-red font-semibold" : ""}`}
+                  >
+                    {item.name}
+                    {item.hasDropdown && (
+                      <svg xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-200 ${openDropdown === item.id ? "rotate-180" : ""}`} aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    )}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-red rounded-full" />
+                    )}
                   </Link>
+
                   {item.hasDropdown && item.submenu && (
-                    <div className="h-auto w-[250px] rounded-lg border border-red bg-white z-[100] shadow-lg absolute top-6 transition-opacity duration-300 ease-in-out opacity-0 hidden group-hover:opacity-100 group-hover:block">
-                      <ul className="py-5">
-                        {item.submenu.map((submenu) => (
-                          <Link to={submenu.link} key={submenu.id}>
-                            <li className="p-1 hover:font-extrabold cursor-pointer flex items-center transition-all duration-300 ease-in">
-                              <img src="/icons/chevronRightSmall.svg" alt="" aria-hidden="true" width={16} height={16} />
-                              {submenu.name}
-                            </li>
-                          </Link>
-                        ))}
-                      </ul>
-                    </div>
+                    <AnimatePresence>
+                      {openDropdown === item.id && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 6 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 6 }}
+                          transition={{ duration: 0.15, ease: "easeOut" }}
+                          className="absolute top-full left-0 mt-1 w-[220px] rounded-xl border border-red/20 bg-white shadow-card z-[1000] overflow-hidden"
+                        >
+                          <ul className="py-2">
+                            {item.submenu.map((submenu) => (
+                              <li key={submenu.id}>
+                                <Link
+                                  to={submenu.link}
+                                  className="flex items-center gap-2 px-4 py-2.5 text-sm text-textGray hover:bg-red-50 hover:text-red"
+                                  onClick={() => setOpenDropdown(null)}
+                                >
+                                  <svg xmlns="http://www.w3.org/2000/svg" width={12} height={12} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                                  {submenu.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   )}
-                </div>
-              ))}
-            </>
+                </li>
+              );
+            })}
           </ul>
-          <Button link="/contacto" className="ml-5">
+          <Button link="/contacto" className="ml-4">
             CONTACTO
           </Button>
-        </div>
-      </div>
+        </nav>
+      </header>
     </>
   );
 };

@@ -1,17 +1,28 @@
 export const Loader = () => {
   return (
-    <div className="h-[70vh] flex justify-center items-center text-4xl font-semibold text-red relative">
-      <div
-        className="inline-block h-60 w-60 animate-spin rounded-full border-[10px] border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-        role="status"
-      >
-        <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-          Loading...
-        </span>
+    <div
+      className="h-[70vh] flex flex-col justify-center items-center gap-6"
+      role="status"
+      aria-label="Cargando"
+    >
+      <div className="relative">
+        <div className="w-20 h-20 rounded-full border-4 border-primaryGray border-t-red animate-spin" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-soft">
+            <img
+              src="/img/Navbar/FrommLogo.webp"
+              alt=""
+              aria-hidden="true"
+              height={36}
+              width={36}
+              className="object-contain"
+            />
+          </div>
+        </div>
       </div>
-      <div className="absolute">
-        <img src="/img/Navbar/FrommLogo.webp" alt="FROMM Chile" height={190} width={190} />
-      </div>
+      <p className="text-sm text-textGray font-light tracking-wide animate-pulse">
+        Cargando...
+      </p>
     </div>
   );
 };
