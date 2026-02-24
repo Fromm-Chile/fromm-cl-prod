@@ -124,7 +124,7 @@ export const Products = () => {
 
   return (
     <>
-      {true ? (
+      {isProductsLoading && categoriesLoading ? (
         <Loader />
       ) : (
         <>
