@@ -19,7 +19,7 @@ export const ServicioTecnico = () => {
         link="/servicio-tecnico#service-form"
         buttonTitle="Contáctanos"
       />
-      <section className="px-10 md:max-w-[875px] md:m-auto mt-20 md:mb-10 md:mt-20">
+      <section className="prose-content px-10 md:max-w-[875px] md:m-auto mt-20 md:mb-10 md:mt-20">
         <div className="mb-10">
           <p className="mb-5">
             FROMM CHILE S.A. esta dispuesto a cuidar de nuestros clientes
@@ -61,7 +61,7 @@ export const ServicioTecnico = () => {
           </p>
         </div>
       </section>
-      <div id="service-form" className="mt-[-35px]">
+      <div id="service-form">
         <ServiceForm
           titulo="SOLICITUD DE SERVICIO TÉCNICO"
           descripcion="Si desea realizar mantención preventiva, correctiva o adquirir algún repuesto para sus equipos, no dude en contactase con nuestro servicio."

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { servicesData } from "../../Data/enzunchadoData";
 
 export const InfoAcordeon = () => {
@@ -8,37 +9,55 @@ export const InfoAcordeon = () => {
     setOpenAcordeon((prev) => (prev === id ? null : id));
 
   return (
-    <>
-      {servicesData.map((service) => (
-        <div key={service.id}>
-          <div
-            className="px-2 py-5 cursor-pointer flex justify-between items-center hover:bg-gray-100 select-none font-medium text-lg text-textGray"
-            onClick={() => handleAccordion(service.id)}
-          >
-            <p>{service.title}</p>
-            {openAcordeon === service.id ? (
-              <img src="/icons/minusIcon.svg" alt="Contraer" />
-            ) : (
-              <img src="/icons/plusIcon.svg" alt="Expandir" />
-            )}
-          </div>
-          <div
-            className={`border border-t-transparent border-l-transparent border-r-transparent border-b-black ${
-              openAcordeon === service.id
-                ? "h-auto border border-b-black"
-                : "h-0"
-            }`}
-          >
-            <p
-              className={`px-3 py-5 ${
-                openAcordeon === service.id ? "visible" : "invisible"
-              }`}
+    <div className="flex flex-col divide-y divide-black/10">
+      {servicesData.map((service) => {
+        const isOpen = openAcordeon === service.id;
+        return (
+          <div key={service.id}>
+            <button
+              className="w-full px-3 py-4 cursor-pointer flex justify-between items-center hover:bg-red-50 select-none font-medium text-base text-textGray rounded-lg text-left"
+              onClick={() => handleAccordion(service.id)}
+              aria-expanded={isOpen}
             >
-              {service.description}
-            </p>
+              <span>{service.title}</span>
+              <motion.svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={18}
+                height={18}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                animate={{ rotate: isOpen ? 180 : 0 }}
+                transition={{ duration: 0.2 }}
+                className="text-red shrink-0"
+                aria-hidden="true"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </motion.svg>
+            </button>
+
+            <AnimatePresence initial={false}>
+              {isOpen && (
+                <motion.div
+                  key="content"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+                  className="overflow-hidden"
+                >
+                  <p className="px-3 pb-4 pt-1 text-sm text-textGray font-light leading-relaxed">
+                    {service.description}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-        </div>
-      ))}
-    </>
+        );
+      })}
+    </div>
   );
 };

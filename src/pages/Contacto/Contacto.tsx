@@ -4,12 +4,12 @@ import { ContactForm } from "../../components/form/ContactForm";
 export const Contacto = () => {
   return (
     <>
-      <title>Contacto</title>
+      <title>Contacto | FROMM Chile - Soluciones de Embalaje</title>
       <meta
         name="description"
-        content="Envíanos un mensaje y nos pondremos en contacto"
+        content="Contáctanos para consultas sobre embalaje industrial, cotizaciones de zunchos, envolvedoras o servicio técnico. Respondemos a la brevedad."
       />
-      <meta name="keywords" content="Contacto" />
+      <link rel="canonical" href="https://fromm-pack.cl/contacto" />
       <InfoBanner
         srcImg="https://pub-873e7884cc3b416fa7c9d881d5d16822.r2.dev/contacto.jpg"
         title="¿Necesitas ayuda?"
@@ -19,6 +19,7 @@ export const Contacto = () => {
         alt="contacto"
         category="CONTACTO"
       />
+      <div className="h-16"></div>
       <ContactForm
         titulo="FORMULARIO DE CONTACTO"
         descripcion="Envíanos un mensaje y nos pondremos en contacto contigo a la brevedad"

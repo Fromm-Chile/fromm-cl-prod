@@ -19,20 +19,22 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <Link to={link} state={state}>
-      <div className="cursor-pointer transform hover:scale-105 transition-transform">
-        <div className="bg-white md:h-[470px] lg:h-[500px] px-5 py-5 my-5 rounded-md hover:shadow-2xl hover:border-2 hover:border-red transition-all ease duration-500 border border-primaryGray">
+      <div className="cursor-pointer hover:scale-[1.02] transition-transform duration-200">
+        <div className="bg-white md:min-h-[460px] lg:min-h-[490px] px-5 py-6 my-4 rounded-xl shadow-soft hover:shadow-card-hover hover:border-red border border-primaryGray transition-all duration-200 flex flex-col">
           <img
             src={srcImg}
             alt={alt}
             loading="lazy"
-            className="h-[250px] w-[250px] m-auto object-contain"
+            className="h-[240px] w-[240px] m-auto object-contain"
           />
-          <div>
-            <p className="tracking-widest text-red font-extralight text-lg">
+          <div className="mt-4 flex flex-col gap-2 flex-1">
+            <span className="inline-block bg-red-50 text-red text-xs font-medium tracking-widest rounded-full px-3 py-1 w-fit">
               PRODUCTO
+            </span>
+            <p className="text-base font-semibold text-left mt-1">{name}</p>
+            <p className="text-sm font-light text-textGray text-left leading-relaxed">
+              {subtitle}
             </p>
-            <p className="text-lg font-bold mb-8 text-left">{name}</p>
-            <p className="text-base font-light text-left">{subtitle}</p>
           </div>
         </div>
       </div>

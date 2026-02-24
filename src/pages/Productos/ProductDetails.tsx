@@ -62,13 +62,15 @@ export const ProductDetails = () => {
         ? prev === 0
           ? productDetails.srcImg.length - 1
           : prev - 1
-        : prev
+        : prev,
     );
   };
 
   const nextSlide = () => {
     setCurrentImage((prev) =>
-      productDetails && prev === productDetails.srcImg.length - 1 ? 0 : prev + 1
+      productDetails && prev === productDetails.srcImg.length - 1
+        ? 0
+        : prev + 1,
     );
   };
 
@@ -82,7 +84,7 @@ export const ProductDetails = () => {
   };
 
   const isProductInInvoice = products.find(
-    (product) => product.id === productDetails?.id
+    (product) => product.id === productDetails?.id,
   );
 
   return (
@@ -282,7 +284,7 @@ export const ProductDetails = () => {
                             <p>{item}</p>
                           </div>
                         </div>
-                      )
+                      ),
                     )
                   ) : (
                     <p>{productDetails?.jsonDetails?.information}</p>
