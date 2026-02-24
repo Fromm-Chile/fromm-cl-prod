@@ -71,7 +71,7 @@ export const Products = () => {
       { categoryId: category, page: page - 1, name: debouncedSearch },
     ],
     queryFn: async (
-      a
+      a,
     ): Promise<{ products: ProductType[]; totalPages: number }> => {
       const response = await axios(`${apiUrl}/products`, {
         method: "GET",
@@ -124,12 +124,15 @@ export const Products = () => {
 
   return (
     <>
-      {isProductsLoading && categoriesLoading ? (
+      {true ? (
         <Loader />
       ) : (
         <>
           <title>Productos de Embalaje Industrial | FROMM Chile</title>
-          <meta name="description" content="Catálogo de productos de embalaje industrial FROMM Chile: zunchos de acero y poliéster, máquinas envolvedoras, airpads, film de embalaje y herramientas de flejado." />
+          <meta
+            name="description"
+            content="Catálogo de productos de embalaje industrial FROMM Chile: zunchos de acero y poliéster, máquinas envolvedoras, airpads, film de embalaje y herramientas de flejado."
+          />
           <link rel="canonical" href="https://fromm-pack.cl/productos" />
           <InfoBanner
             category="SIEMPRE UNA SOLUCIÓN"
@@ -179,13 +182,17 @@ export const Products = () => {
                         alt="Sin resultados"
                         className="h-40 w-40 opacity-60"
                       />
-                      <p className="text-xl font-semibold text-textGray">Sin resultados</p>
-                      <p className="text-sm text-textGray font-light">Intenta con otro término o categoría</p>
+                      <p className="text-xl font-semibold text-textGray">
+                        Sin resultados
+                      </p>
+                      <p className="text-sm text-textGray font-light">
+                        Intenta con otro término o categoría
+                      </p>
                     </div>
                   ) : (
                     <>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-4 p-5 max-w-[1250px] md:mx-auto md:mt-20 md:w-[100%]">
-                        {(!products ? products ?? [] : products).map(
+                        {(!products ? (products ?? []) : products).map(
                           (product) => (
                             <ProductCard
                               key={product.id}
@@ -195,7 +202,7 @@ export const Products = () => {
                               subtitle={product.subtitle}
                               link={`/productos/${product.slug}?producto=${product.id}`}
                             />
-                          )
+                          ),
                         )}
                       </div>
                       {totalPages > 1 && (
@@ -205,7 +212,7 @@ export const Products = () => {
                               navigate(
                                 typeof category === "number"
                                   ? `?categoryId=${category}&page=${page === 0 ? 0 : page - 1}`
-                                  : `?page=${page === 0 ? 0 : page - 1}`
+                                  : `?page=${page === 0 ? 0 : page - 1}`,
                               )
                             }
                             className="px-4 py-2.5 text-sm font-medium hover:bg-red hover:text-white border-r border-red/30 disabled:opacity-40"
@@ -222,7 +229,7 @@ export const Products = () => {
                               navigate(
                                 typeof category === "number"
                                   ? `?categoryId=${category}&page=${page === totalPages ? totalPages : page + 1}`
-                                  : `?page=${page === totalPages ? totalPages : page + 1}`
+                                  : `?page=${page === totalPages ? totalPages : page + 1}`,
                               )
                             }
                             className="px-4 py-2.5 text-sm font-medium hover:bg-red hover:text-white border-l border-red/30 disabled:opacity-40"

@@ -19,6 +19,7 @@ export const Contacto = () => {
         alt="contacto"
         category="CONTACTO"
       />
+      <div className="h-16"></div>
       <ContactForm
         titulo="FORMULARIO DE CONTACTO"
         descripcion="Envíanos un mensaje y nos pondremos en contacto contigo a la brevedad"

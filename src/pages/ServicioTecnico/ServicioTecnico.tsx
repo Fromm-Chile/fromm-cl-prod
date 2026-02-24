@@ -61,7 +61,7 @@ export const ServicioTecnico = () => {
           </p>
         </div>
       </section>
-      <div id="service-form" className="mt-[-35px]">
+      <div id="service-form">
         <ServiceForm
           titulo="SOLICITUD DE SERVICIO TÉCNICO"
           descripcion="Si desea realizar mantención preventiva, correctiva o adquirir algún repuesto para sus equipos, no dude en contactase con nuestro servicio."

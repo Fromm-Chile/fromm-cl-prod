@@ -13,8 +13,8 @@ export const Loader = () => {
               src="/img/Navbar/FrommLogo.webp"
               alt=""
               aria-hidden="true"
-              height={36}
-              width={36}
+              height={56}
+              width={56}
               className="object-contain"
             />
           </div>
